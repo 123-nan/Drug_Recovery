@@ -1,4 +1,5 @@
 import User from '../models/user'
+import Therapist from '../models/therapist';
 import jsonwebtoken, { JsonWebTokenError } from 'jsonwebtoken';
 
 export const register = async (req,res) =>{
@@ -62,3 +63,8 @@ export const login = async (req,res) => {
     res.status(400).send("Signin failed");
   }
 };
+
+export const therapist = async(req,res) =>{
+      const data = await Therapist.find().exec();
+      res.send(data);
+}
