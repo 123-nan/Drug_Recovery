@@ -1,8 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './Navbar.css'
+import { useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 export default function Navbar(props) {
+
+  const {user} = useSelector((state) => ({...state}));
+  
+
+
+ const dispatch = useDispatch();
+  function logout(){
+    dispatch({
+      type:"LOGOUT",
+      payload:null,
+    })
+    window.localStorage.removeItem("auth");
+   // history.push("/login");
+  }
+
   return (
     <>
   <nav className="navbar navbar-expand-lg bg-light">
@@ -37,6 +54,10 @@ export default function Navbar(props) {
         <li className="nav-item ">
           <a className="nav-link" href="/">Report</a>
         </li>
+
+      {  user && user.token && <li className="nav-item ">
+          <button className="btn btn-danger" onClick={logout}>Log Out</button>
+        </li>}
         
       </ul>
 

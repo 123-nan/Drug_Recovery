@@ -3,10 +3,9 @@ import Therapist from '../models/therapist';
 import jsonwebtoken, { JsonWebTokenError } from 'jsonwebtoken';
 import ScheduleSchema from '../models/schedule';
 
-
 export const register = async (req,res) =>{
-    console.log(req.headers);
-    const {name,email,password,age,gender} = req.headers;
+    console.log(req.body);
+    const {name,email,password,age,gender} = req.body;
     // validation
     if(!name)
     return res.status(400).send("Name is required");
@@ -32,18 +31,17 @@ export const register = async (req,res) =>{
       console.log("Create USER FAILED",err);
       return res.status(400).send("Error! Try Again");
     }
-
 }
 
 export const login = async (req,res) => {
-  console.log(req.headers);
-  const {email,password} = req.headers;
+  console.log(req.body);
+  const {email,password} = req.body;
   try{
    let user = await User.findOne({email}).exec();
    console.log("USER EXIST",user);
    if(!user)
    res.status(400).send("Email not found");
-
+   else{
    user.comparePassword(password,(err,match) =>{
      console.log(err);
      if(!match || err)
@@ -57,9 +55,9 @@ export const login = async (req,res) => {
        email:user.email,
        _id:user._id,
      }});
-  
    })
   }
+}
   catch(err){
     console.log("LOGIN ERROR FAILED",err);
     res.status(400).send("Signin failed");

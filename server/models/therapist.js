@@ -45,6 +45,9 @@ const userSchema = new Schema({
         type:String,
         trime:true,
         required:"Qualification Needed"
+    },
+    image:{
+        type:String,
     }
 
 },{timestamps:true})
