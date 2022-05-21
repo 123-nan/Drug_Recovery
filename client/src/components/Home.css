@@ -1,9 +1,22 @@
 .background{
-    background-image: url("/src/images/home_bg.jpg");
+    background-image: url("/src/components/images/home_bg.jpg");
     height: 590px;
     background-size: cover;
     background-position: center;
   }
+
+  .drugs{
+    background-image: url("/src/components/images/drugs-bg.jpg");
+    height: 590px;
+    background-size: cover;
+    background-position: center;
+  }
+
+.drugscontent{
+  color:antiquewhite;
+  font-size: xx-large;
+  font-style: italic;
+}
 
   .headinghome{
     margin: auto;
@@ -12,4 +25,8 @@
     font-weight: 900;
     color: rgb(135, 18, 18);
     text-decoration: wavy;
+  }
+
+  .privacy{
+    text-align: center;
   }
