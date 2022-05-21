@@ -1,6 +1,8 @@
 import User from '../models/user'
 import Therapist from '../models/therapist';
 import jsonwebtoken, { JsonWebTokenError } from 'jsonwebtoken';
+import ScheduleSchema from '../models/schedule';
+
 
 export const register = async (req,res) =>{
     console.log(req.headers);
@@ -67,4 +69,40 @@ export const login = async (req,res) => {
 export const therapist = async(req,res) =>{
       const data = await Therapist.find().exec();
       res.send(data);
+}
+
+export const scheduleTherapist = async(req,res) =>{
+  const data = await ScheduleSchema.find().exec();
+  res.send(data);
+}
+
+
+export const editScheduleTherapist = async(req,res) =>{
+  console.log(req.headers);
+  const {uid,monday,tuesday,wednesday,thrusday,friday,saturday,sunday} = req.headers;
+
+  const therap = await ScheduleSchema.findOne({uid}).exec();
+
+  if(!therap)
+  {
+     const therap = new ScheduleSchema({uid,monday,tuesday,wednesday,thrusday,friday,saturday,sunday});
+     try{
+       await therap.save();
+       res.json({ok:true});
+     }
+     catch(err)
+     {
+       res.json(err);
+     }
+  }
+  else{
+  try{
+    const schedule = await ScheduleSchema.findOneAndUpdate({uid},{monday,tuesday,wednesday,thrusday,friday,saturday,sunday}).exec();
+    return res.json({ok:true});
+  }
+  catch(err){
+    console.log("Failed",err);
+    return res.status(400).send("Error! Try Again");
+  }
+}
 }
