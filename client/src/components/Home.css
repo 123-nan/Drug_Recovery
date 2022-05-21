@@ -1,0 +1,15 @@
+.background{
+    background-image: url("/src/images/home_bg.jpg");
+    height: 590px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .headinghome{
+    margin: auto;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: 900;
+    color: rgb(135, 18, 18);
+    text-decoration: wavy;
+  }
