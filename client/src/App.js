@@ -9,6 +9,7 @@ import Navbar from './components/Navbar'
 import 'react-toastify/dist/ReactToastify.css';
 import PrivateRoute from './components/PrivateRoute';
 import DashBoard from './user/Dashboard'
+import TherapistDetail from './user/TherapistDetail';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       <Route exact path="/login" component ={Login} />
       <Route exact path="/register" component={Register} />
       <PrivateRoute exact path="/dashboard" component={DashBoard} />
+      <PrivateRoute exact path="/therapist-detail" component={TherapistDetail} />
     </Switch>
     </>
   );
