@@ -14,7 +14,6 @@ import TherapistDetail from './user/TherapistDetail';
 function App() {
 
   return (
-
     <>
     <ToastContainer />
     <Navbar title="Cure Street"/>

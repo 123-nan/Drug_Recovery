@@ -1,5 +1,5 @@
 .background{
-    background-image: url("/src/components/images/home_bg.jpg");
+    background-image: url("/src/components/images/healthcare_bg.jpg");
     height: 590px;
     background-size: cover;
     background-position: center;
@@ -23,7 +23,7 @@
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
     font-weight: 900;
-    color: rgb(135, 18, 18);
+    color: rgb(255, 255, 255);
     text-decoration: wavy;
   }
 

@@ -1,10 +1,11 @@
 .nav-item{
-    font-size: large;
+    font-size:larger;
     font-weight: 700;
+    color: rgb(4, 4, 81);
 }
 
 .navbar-brand{
     font-size: xx-large;
     font-weight: 500;
-    color:rgb(113, 6, 6);
+    color:rgb(27, 6, 113);
 }
