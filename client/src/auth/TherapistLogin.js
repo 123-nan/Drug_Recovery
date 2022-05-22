@@ -1,10 +1,10 @@
 import LoginForm from '../components/LoginForm';
 import { useState } from 'react';
-import { login } from '../actions/auth';
+import { therapistlogin } from '../actions/auth';
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 
-const Login =({history}) =>{
+const TherapistLogin =({history}) =>{
 
     const dispatch = useDispatch();
 
@@ -16,15 +16,14 @@ const Login =({history}) =>{
         e.preventDefault();
         console.log("SEND DATA",{email,password});
         try{
-            let res = await login({email,password});
+            let res = await therapistlogin({email,password});
             console.log('LOGIN RESPONSE',res);
             if(res.data){
                 console.log("SAVE USER RES IN REDUX AND LOCAL STORAGE");
                 
             }
-            // console.log(res.data);
-            window.localStorage.setItem('auth',JSON.stringify(res.data));
             console.log(res.data);
+            window.localStorage.setItem('auth',JSON.stringify(res.data));
             dispatch({
                 type:"LOGGED_IN_USER",
                 payload:res.data,
@@ -44,7 +43,7 @@ const Login =({history}) =>{
     return (
         <>
         <div className="container-fluid bg-secondary h1 p-5 text-center">
-         <h1>Login</h1>
+         <h1>Therapist Login</h1>
         </div>
         <div className='container'>
             <div className='row'>
@@ -61,4 +60,4 @@ const Login =({history}) =>{
 
 }
 
-export default Login;
+export default TherapistLogin;

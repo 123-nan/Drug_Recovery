@@ -47,6 +47,12 @@ export default function Navbar(props) {
         {!user&& <Link to='/register' className="anchors">
             <li className="nav-item nav-link" >SignUp</li>
           </Link>}
+
+          {!user && <li className="nav-item nav-link">Are you a Therapist? Login Here -></li>}
+
+          {!user&& <Link to='/therapist-login' className="anchors">
+            <li className="nav-item nav-link" >Login</li>
+          </Link>}
               
           {user&& user.token &&  <div class="dropdown">
             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">

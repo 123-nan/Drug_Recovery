@@ -1,20 +1,19 @@
 import { Route,Redirect } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-const PrivateRouteForUser = ({...rest}) => {
+const PrivateRouteForTherapist = ({...rest}) => {
     const {user} = useSelector((state) => ({...state}));
 
     let flag = false;
-    const tp = user.u;
-    const typ = "patient";
+    
     
     if(user == null)
     return false?<Route {...rest} /> : <Redirect to="/login"/>;
     else if(user.u == "therapist")
-    return false?<Route {...rest} /> : <Redirect to="/therdashboard"/>;
+    return true?<Route {...rest} /> : <Redirect to="/dashboard"/>;
     else
-    return true?<Route {...rest} /> : <Redirect to="/login"/>;
+    return false?<Route {...rest} /> : <Redirect to="/dashboard"/>;
 
 };
 
-export default PrivateRouteForUser;
+export default PrivateRouteForTherapist;

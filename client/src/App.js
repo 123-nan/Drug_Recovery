@@ -7,10 +7,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from "react-toastify";
 import Navbar from './components/Navbar'
 import 'react-toastify/dist/ReactToastify.css';
-import PrivateRoute from './components/PrivateRoute';
+import PrivateRouteForUser from './components/PrivateRoute';
+import PrivateRouteForTherapist from './components/PrivateRouteForTherapist';
 import DashBoard from './user/Dashboard'
 import TherapistDetail from './user/TherapistDetail';
+import PrivateRouteForAll from './components/PrivateRouteForAll';
 import TherapistDasboard from './user/TherapistDasboard';
+import TherapistLogin from './auth/TherapistLogin';
 
 function App() {
 
@@ -19,12 +22,13 @@ function App() {
     <ToastContainer />
     <Navbar title="Cure Street"/>
      <Switch>
-      <Route exact path="/" component ={Home} />
-      <Route exact path="/login" component ={Login} />
-      <Route exact path="/register" component={Register} />
-      <PrivateRoute exact path="/dashboard" component={DashBoard} />
-      <PrivateRoute exact path="/therdashboard" component={TherapistDasboard} />
-      <PrivateRoute exact path="/therapist-detail" component={TherapistDetail} />
+      <PrivateRouteForAll exact path="/" component ={Home} />
+      <PrivateRouteForAll exact path="/login" component ={Login} />
+      <PrivateRouteForAll exact path="/register" component={Register} />
+      <PrivateRouteForAll exact path="/therapist-login" component={TherapistLogin} />
+      <PrivateRouteForUser exact path="/dashboard" component={DashBoard} />
+      <PrivateRouteForTherapist exact path="/therdashboard" component={TherapistDasboard} />
+      <PrivateRouteForUser exact path="/therapist-detail" component={TherapistDetail} />
     </Switch>
     </>
   );
