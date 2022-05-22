@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import './Navbar.css'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
+import logo from "./images/logo.jpg"
 
 export default function Navbar(props) {
 
@@ -26,7 +27,9 @@ export default function Navbar(props) {
   <nav className="navbar navbar-expand-lg bg-light">
   <div className="container-fluid">
     
-    <a className="navbar-brand ml-5" href="/">{props.title}</a>
+    <a className="navbar-brand ml-5" href="/">
+    <img src={logo} alt="" width="50" height="50" class="d-inline-block align-text-top"/>
+      {props.title}</a>
     
       {/* {  user && user.token && <li className="nav-item ">
           <button className="btn btn-danger" onClick={logout}>Log Out</button>
