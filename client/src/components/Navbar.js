@@ -4,12 +4,14 @@ import PropTypes from 'prop-types'
 import './Navbar.css'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
+import { useHistory } from 'react-router-dom';
+
 
 export default function Navbar(props) {
 
   const {user} = useSelector((state) => ({...state}));
   
-
+ const history = useHistory();
 
  const dispatch = useDispatch();
   function logout(){
@@ -18,7 +20,7 @@ export default function Navbar(props) {
       payload:null,
     })
     window.localStorage.removeItem("auth");
-   // history.push("/login");
+    history.push("/login");
   }
 
   return (
