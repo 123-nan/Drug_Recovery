@@ -56,8 +56,8 @@ export default function Navbar(props) {
             <Link to='/dashboard'>
                 <li className="dropdown-item">Dashboard</li>
             </Link>
-            <Link to='/'>
-                <li className="dropdown-item">Report</li>
+            <Link to='/therdashboard'>
+                <li className="dropdown-item"> Therapist Dashboard</li>
             </Link>
              <li className="dropdown-item" onClick={logout}>LogOut</li>
             </ul>
