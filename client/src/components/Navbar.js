@@ -43,10 +43,10 @@ export default function Navbar(props) {
         <button type="button nav-item" class="btn btn-primary mx-3">SignUp</button>
           </Link>}
 
-          {!user && <li className="nav-item nav-link">Are you a Therapist? Login Here -></li>}
+          {!user && <li className="nav-item">Are you a Therapist?</li>}
 
           {!user&& <Link to='/therapist-login' className="anchors">
-            <li className="nav-item nav-link" >Login</li>
+            <li className="nav-item nav-link" >Login Here</li>
           </Link>}
               
           {user && user.token &&  <div class="dropdown">

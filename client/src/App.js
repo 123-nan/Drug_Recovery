@@ -15,6 +15,7 @@ import PrivateRouteForAll from './components/PrivateRouteForAll';
 import TherapistDasboard from './user/TherapistDasboard';
 import TherapistLogin from './auth/TherapistLogin';
 import Schedule from './therapist/schedule';
+import About from './components/About';
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
       <PrivateRouteForTherapist exact path="/therdashboard" component={TherapistDasboard} />
       <PrivateRouteForUser exact path="/therapist-detail" component={TherapistDetail} />
       <PrivateRouteForUser exact path="/therapist-detail/schedule/:id" component={Schedule} />
- 
+      <Route exact path="/about" component={About} />
 
     </Switch>
     </>
