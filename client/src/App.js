@@ -16,14 +16,11 @@ import TherapistDasboard from './user/TherapistDasboard';
 import PrivateRouteForNone from './components/PrivateForNone';
 import TherapistLogin from './auth/TherapistLogin';
 import Schedule from './therapist/schedule';
-<<<<<<< HEAD
 import About from './components/About';
 import AppointmentP from './user/AppointmentP';
 import AppointmentT from './user/AppointmentT';
-=======
 import ChatRoom from './therapist/chatroom';
 import Joinroom from './therapist/joinroom';
->>>>>>> piyush
 
 function App() {
   return (
@@ -35,7 +32,7 @@ function App() {
       <PrivateRouteForAll exact path="/login" component ={Login} />
       <PrivateRouteForAll exact path="/register" component={Register} />
       <PrivateRouteForAll exact path="/therapist-login" component={TherapistLogin} />
-      <PrivateRouteForNone exact path="/joinroom" component ={Joinroom} />
+      <PrivateRouteForNone exact path="/joinroom/:id" component ={Joinroom} />
       <PrivateRouteForNone exact path="/chat-room" component ={ChatRoom} />
       <PrivateRouteForUser exact path="/dashboard" component={DashBoard} />
       <PrivateRouteForUser exact path="/therapist-detail/schedule" component={Schedule} />
@@ -44,7 +41,7 @@ function App() {
       <PrivateRouteForUser exact path="/therapist-detail/schedule/:id" component={Schedule} />
       <Route exact path="/about" component={About} />
       <Route exact path="/patient-appointment" component={AppointmentP} />  
-      <Route exact path="/therapist-appotintment" component={AppointmentT} />
+      <Route exact path="/therapist-appointment" component={AppointmentT} />
 
     </Switch>
     </>

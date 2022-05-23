@@ -1,7 +1,7 @@
 import {useSelector} from 'react-redux'
 import { bookingSchedule } from '../actions/auth';
 
-const BookingCard =({day,list,uuid}) =>{
+const BookingCard =({day,list,uuid,tname}) =>{
        
 
     console.log(day,list);
@@ -9,6 +9,9 @@ const BookingCard =({day,list,uuid}) =>{
     const {user} = useSelector((state) =>({...state}));
 
     const puid = user.user._id;
+    const pname = user.user.name;
+
+    console.log(tname);
 
     const handleClick = async (e)=>{
       console.log(e.target.innerText);
@@ -18,7 +21,7 @@ const BookingCard =({day,list,uuid}) =>{
       const detail = e.target.innerText;
       const time=detail+":"+new Date().getDate() + ":" + new Date().getMonth()+":"+new Date().getFullYear();
       const status = false;
-      const data = await bookingSchedule({time,status,uuid,puid});
+      const data = await bookingSchedule({time,status,uuid,puid,pname,tname});
      
     }
   

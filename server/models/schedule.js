@@ -7,6 +7,11 @@ const scheduleSchema = new Schema({
         trim:true,
         required:'Name is required'
     },
+    name:{
+        type:String,
+        trim:true,
+        required:'Name is required'
+    },
     monday:[{
         type:String,
         unique:true,

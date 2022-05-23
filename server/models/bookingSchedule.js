@@ -21,6 +21,16 @@ const bookingScheduleSchema = new Schema({
         type:Boolean,
         trim:true,
         required:'Status required'
-    }
+    },
+    pname:{
+        type:String,
+        trim:true,
+        required:'patient name is required'
+    },
+    tname:{
+        type:String,
+        trim:true,
+        required:'Therapist name is required'
+    },
 },{timestamps:true})
 export default mongoose.model('BookingScheduleSchema',bookingScheduleSchema); 

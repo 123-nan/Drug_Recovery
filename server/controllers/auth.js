@@ -185,8 +185,8 @@ catch(err){
 
 export const bookingschedule = async(req,res) =>{
     console.log(req.body);
-    const {time,uuid,puid,status} = req.body;
-    const detail = new BookingSchedule({time,uuid,puid,status})
+    const {time,uuid,puid,status,pname,tname} = req.body;
+    const detail = new BookingSchedule({time,uuid,puid,status,pname,tname})
     try{
       detail.save();
       console.log("Booking Saved");

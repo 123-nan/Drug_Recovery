@@ -8,6 +8,7 @@ const Schedule = () => {
 
     const params = useParams();
     const uid = params.id;
+    let therapist;
 
     const [data,setData] = useState();
 
@@ -31,7 +32,7 @@ const Schedule = () => {
         customList = new Array();
         for (const key in data) {
 
-            if(key!="_id" && key!="uid" && key !="createdAt" && key!="updatedAt" && key !="__v")
+            if(key!="_id" && key!="uid" && key !="createdAt" && key!="updatedAt" && key !="__v" && key != "name")
             {
 
                 // console.log(`${key}: ${data[key]}`);
@@ -41,6 +42,8 @@ const Schedule = () => {
                 };
                 customList.push(obj);
             }
+            if(key === "name")
+            therapist = data[key];
 
             
         }
@@ -53,7 +56,7 @@ const Schedule = () => {
     return (
         <>
         <div className="row p-5 m-l-5 text-center">
-        {customList != null &&  customList.map((list) => <BookingCard uuid={uid} day={list.day} list={list.date}/>)}
+        {customList != null &&  customList.map((list) => <BookingCard uuid={uid} day={list.day} list={list.date} tname={therapist}/>)}
         </div>
         </>
 

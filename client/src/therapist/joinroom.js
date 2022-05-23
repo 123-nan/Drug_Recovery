@@ -1,7 +1,10 @@
 import { useHistory } from "react-router-dom";
+import { useParams } from "react-router-dom";
 const Joinroom= () => {
 
+   const params = useParams();
 
+   console.log(params.id);
     
     const history = useHistory();
     const handleClick = (e) =>{
