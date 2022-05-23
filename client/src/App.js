@@ -16,6 +16,8 @@ import TherapistDasboard from './user/TherapistDasboard';
 import TherapistLogin from './auth/TherapistLogin';
 import Schedule from './therapist/schedule';
 import About from './components/About';
+import AppointmentP from './user/AppointmentP';
+import AppointmentT from './user/AppointmentT';
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
       <PrivateRouteForUser exact path="/therapist-detail" component={TherapistDetail} />
       <PrivateRouteForUser exact path="/therapist-detail/schedule/:id" component={Schedule} />
       <Route exact path="/about" component={About} />
+      <Route exact path="/appointmentp" component={AppointmentP} />  
+      <Route exact path="/appointmentther" component={AppointmentT} />
 
     </Switch>
     </>

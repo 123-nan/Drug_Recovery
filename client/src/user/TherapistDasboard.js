@@ -21,7 +21,7 @@ export default function TherapistDasboard() {
             <img src={appcover} class="card-img-top" alt="..."/>
             <div className="card-body">
                 
-                <a href="/" className="btn1">Appointments</a>
+                <a href="/appointmentther" className="btn1">Appointments</a>
             </div>
             </div>
             <div className="card col m-5 p-2" style={{width: '18rem'}}>
