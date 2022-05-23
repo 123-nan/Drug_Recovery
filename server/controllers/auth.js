@@ -2,6 +2,7 @@ import User from '../models/user'
 import Therapist from '../models/therapist';
 import jsonwebtoken, { JsonWebTokenError } from 'jsonwebtoken';
 import ScheduleSchema from '../models/schedule';
+import BookingSchedule from '../models/bookingSchedule';
 
 export const register = async (req,res) =>{
     console.log(req.body);
@@ -180,3 +181,20 @@ catch(err){
   res.status(400).send("Signin failed");
 }
 };
+
+
+export const bookingschedule = async(req,res) =>{
+    console.log(req.body);
+    const {time,uuid,puid,status} = req.body;
+    const detail = new BookingSchedule({time,uuid,puid,status})
+    try{
+      detail.save();
+      console.log("Booking Saved");
+      res.json({ok:true});
+    }
+    catch(err)
+    {
+      console.log(err);
+      res.status(400).send({ok:false});
+    }
+}

@@ -8,3 +8,5 @@ export const therapistlogin = async (user) => await axios.post(`${process.env.RE
 export const therapistDetail= async (user) => await axios.get(`${process.env.REACT_APP_API}/therapist`,user);
 
 export const therapistSchedule= async (id) => await axios.post(`${process.env.REACT_APP_API}/schedule-therapist`,id);
+
+export const bookingSchedule = async(data) => await axios.post(`${process.env.REACT_APP_API}/book-schedule`,data);
