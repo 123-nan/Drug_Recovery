@@ -4,6 +4,7 @@ import appcover from "./images/app_cover.jpg"
 import schcover from "./images/schedule_cover.jpg"
 import "./Dashboard.css"
 import { Link } from 'react-router-dom'
+import Footer from '../components/Footer'
 
 export default function TherapistDasboard() {
   return (
@@ -34,6 +35,7 @@ export default function TherapistDasboard() {
             </div>
         </div>
         </div>  
+        <Footer/>
         </>
   )
 }

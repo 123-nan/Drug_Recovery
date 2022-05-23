@@ -4,6 +4,7 @@ import appcover from "./images/app_cover.jpg"
 import recordcover from "./images/recover.jpg"
 import "./Dashboard.css"
 import { Link } from "react-router-dom"
+import Footer from "../components/Footer"
 
 const DashBoard =() =>{
 
@@ -38,6 +39,7 @@ const DashBoard =() =>{
             </div>
         </div>
             </div>
+            <Footer/>
         </>
     )
 }

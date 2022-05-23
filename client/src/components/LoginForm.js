@@ -1,5 +1,5 @@
 
-const LoginForm= ({handleSubmit,email,setEmail,password,setPassword}) => (<form onSubmit={handleSubmit} className="mt-3">
+const LoginForm= ({handleSubmit,email,setEmail,password,setPassword}) => (<form onSubmit={handleSubmit} className="m-5">
     
 
 <div className='form-group mb-3'>
@@ -11,7 +11,7 @@ const LoginForm= ({handleSubmit,email,setEmail,password,setPassword}) => (<form 
 </div>
 
 <div className='form-group mb-3'>
-    <label className='form-label mb-3'>password</label>
+    <label className='form-label mb-3'>Password</label>
     <input type="text" className="form-control"
     placeholder="Enter Password"
     value={password}

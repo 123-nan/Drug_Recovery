@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { therapistlogin } from '../actions/auth';
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
+import Footer from '../components/Footer';
 
 const TherapistLogin =({history}) =>{
 
@@ -55,6 +56,7 @@ const TherapistLogin =({history}) =>{
                 </div> 
             </div>
         </div>
+        <Footer/>
         </>
     )
 
