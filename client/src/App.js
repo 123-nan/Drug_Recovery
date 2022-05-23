@@ -18,6 +18,9 @@ import Schedule from './therapist/schedule';
 import About from './components/About';
 import AppointmentP from './user/AppointmentP';
 import AppointmentT from './user/AppointmentT';
+import Testimonial from './components/Testimonial';
+import Contact from './components/Contact';
+import Blog from './components/Blog';
 
 function App() {
   return (
@@ -37,7 +40,9 @@ function App() {
       <Route exact path="/about" component={About} />
       <Route exact path="/appointmentp" component={AppointmentP} />  
       <Route exact path="/appointmentther" component={AppointmentT} />
-
+      <Route exact path="/testimonial" component={Testimonial} />
+      <Route exact path="/contact" component={Contact} />
+      <Route exact path="/blog" component={Blog} />
     </Switch>
     </>
   );

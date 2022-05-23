@@ -41,3 +41,22 @@
     color: white;
     text-decoration: none;
 }
+
+.btnlogin{
+  background-color:white;
+border: 2px solid #110643;
+color:#110643;
+padding: 5px 10px;
+text-align: center;
+text-decoration:double;
+display: inline-block;
+font-size: 16px;
+margin: 1px;
+border-radius: 25px;
+}
+
+.btnlogin:hover{
+  background-color:#2a1086;
+  color:white;
+  box-shadow: 0 10px 12px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
