@@ -3,6 +3,7 @@ import patcover from "./images/patientcov.jpg"
 import appcover from "./images/app_cover.jpg"
 import schcover from "./images/schedule_cover.jpg"
 import "./Dashboard.css"
+import { Link } from 'react-router-dom'
 
 export default function TherapistDasboard() {
   return (
@@ -21,7 +22,7 @@ export default function TherapistDasboard() {
             <img src={appcover} class="card-img-top" alt="..."/>
             <div className="card-body">
                 
-                <a href="/appointmentther" className="btn1">Appointments</a>
+                <Link to="/therapist-appointment" className="btn1">Appointments</Link>
             </div>
             </div>
             <div className="card col m-5 p-2" style={{width: '18rem'}}>

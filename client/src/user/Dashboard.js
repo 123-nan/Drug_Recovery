@@ -3,6 +3,7 @@ import cover from "./images/cover.jpg"
 import appcover from "./images/app_cover.jpg"
 import recordcover from "./images/recover.jpg"
 import "./Dashboard.css"
+import { Link } from "react-router-dom"
 
 const DashBoard =() =>{
 
@@ -26,7 +27,7 @@ const DashBoard =() =>{
             <div className="card col m-5 p-2" style={{width: '18rem'}}>
             <img src={appcover} class="card-img-top" alt="..."/>
             <div className="card-body">
-                <a href="/appointmentp" className="btn1">Appointments</a>
+                <Link to="/patient-appointment" className="btn1">Appointments</Link>
             </div>
             </div>
             <div className="card col m-5 p-2" style={{width: '18rem'}}>
