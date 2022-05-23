@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from './Footer'
 import "./Home.css"
 import privacypic from "./images/patient_conf.jpg"
 
@@ -23,28 +24,7 @@ export default function Home() {
             </p>
         </div>
     </div>
-    <div className="footer p-5">
-        <h1 className='m-5'>Cure Street</h1>
-       <div className='m-5'>
-        <ul class="nav justify-content-center">
-            <li class="footeritem">
-                <a class="nav-link" href="/">HOME</a>
-            </li>
-            <li class="footeritem">
-                <a class="nav-link" href="/about">ABOUT</a>
-            </li>
-            <li class="footeritem">
-                <a class="nav-link" href="/">TESTIMONIAL</a>
-            </li>
-            <li class="footeritem">
-                <a class="nav-link " href="/">BLOG</a>
-            </li>
-            <li class="footeritem">
-                <a class="nav-link " href="/">CONTCT US</a>
-            </li>
-        </ul>
-        </div>
-    </div>
+    <Footer/>
     </>
   )
 }

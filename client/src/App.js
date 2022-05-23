@@ -21,6 +21,9 @@ import AppointmentP from './user/AppointmentP';
 import AppointmentT from './user/AppointmentT';
 import ChatRoom from './therapist/chatroom';
 import Joinroom from './therapist/joinroom';
+import Testimonial from './components/Testimonial';
+import Contact from './components/Contact';
+import Blog from './components/Blog';
 
 function App() {
   return (
@@ -40,9 +43,11 @@ function App() {
       <PrivateRouteForUser exact path="/therapist-detail" component={TherapistDetail} />
       <PrivateRouteForUser exact path="/therapist-detail/schedule/:id" component={Schedule} />
       <Route exact path="/about" component={About} />
-      <Route exact path="/patient-appointment" component={AppointmentP} />  
-      <Route exact path="/therapist-appointment" component={AppointmentT} />
-
+      <Route exact path="/appointmentp" component={AppointmentP} />  
+      <Route exact path="/appointmentther" component={AppointmentT} />
+      <Route exact path="/testimonial" component={Testimonial} />
+      <Route exact path="/contact" component={Contact} />
+      <Route exact path="/blog" component={Blog} />
     </Switch>
     </>
   );

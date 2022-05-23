@@ -1,0 +1,35 @@
+
+
+.test{
+    background-image: url(https://www.adl-usa.com/wp-content/uploads/2015/12/Testimonials-background.png);
+}
+
+.testhead{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.testcontainer {
+    border: 2px solid #ccc;
+    background-color: lightgoldenrodyellow;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+.testcontainer span {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+@media (max-width: 500px) {
+    .testcontainer {
+        text-align: center;
+    }
+
+    .testcontainer img {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+}

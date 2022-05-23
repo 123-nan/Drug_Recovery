@@ -1,0 +1,18 @@
+.footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+
+  .footeritem{
+    font-size: larger;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .footerhead{
+    text-align: center;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
