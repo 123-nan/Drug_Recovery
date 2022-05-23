@@ -13,8 +13,11 @@ import DashBoard from './user/Dashboard'
 import TherapistDetail from './user/TherapistDetail';
 import PrivateRouteForAll from './components/PrivateRouteForAll';
 import TherapistDasboard from './user/TherapistDasboard';
+import PrivateRouteForNone from './components/PrivateForNone';
 import TherapistLogin from './auth/TherapistLogin';
 import Schedule from './therapist/schedule';
+import ChatRoom from './therapist/chatroom';
+import Joinroom from './therapist/joinroom';
 
 function App() {
   return (
@@ -26,6 +29,8 @@ function App() {
       <PrivateRouteForAll exact path="/login" component ={Login} />
       <PrivateRouteForAll exact path="/register" component={Register} />
       <PrivateRouteForAll exact path="/therapist-login" component={TherapistLogin} />
+      <PrivateRouteForNone exact path="/joinroom" component ={Joinroom} />
+      <PrivateRouteForNone exact path="/chat-room" component ={ChatRoom} />
       <PrivateRouteForUser exact path="/dashboard" component={DashBoard} />
       <PrivateRouteForUser exact path="/therapist-detail/schedule" component={Schedule} />
       <PrivateRouteForTherapist exact path="/therdashboard" component={TherapistDasboard} />
