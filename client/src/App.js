@@ -28,7 +28,7 @@ function App() {
     <ToastContainer />
     <Navbar title="Cure Street"/>
      <Switch>
-      <PrivateRouteForAll exact path="/" component ={Home} />
+      <Route exact path="/" component ={Home} />
       <PrivateRouteForAll exact path="/login" component ={Login} />
       <PrivateRouteForAll exact path="/register" component={Register} />
       <PrivateRouteForAll exact path="/therapist-login" component={TherapistLogin} />

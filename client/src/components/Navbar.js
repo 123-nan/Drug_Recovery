@@ -29,9 +29,9 @@ export default function Navbar(props) {
   <nav className="navbar navbar-expand-lg bg-light">
   <div className="container-fluid">
     
-    <a className="navbar-brand ml-5" href="/">
+    <Link className="navbar-brand ml-5" to="/">
     <img src={logo} alt="" width="50" height="50" class="d-inline-block align-text-top"/>
-      {props.title}</a>    
+      {props.title}</Link>    
 
       <ul className="nav  justify-content-end">
 
