@@ -10,3 +10,7 @@ export const therapistDetail= async (user) => await axios.get(`${process.env.REA
 export const therapistSchedule= async (id) => await axios.post(`${process.env.REACT_APP_API}/schedule-therapist`,id);
 
 export const bookingSchedule = async(data) => await axios.post(`${process.env.REACT_APP_API}/book-schedule`,data);
+
+export const appointemtfortherapist= async(data) => await axios.post(`${process.env.REACT_APP_API}/get-appointment-therapist`,data);
+
+export const appointmentforpatient = async(data) => await axios.post(`${process.env.REACT_APP_API}/get-appointment-patient`,data);

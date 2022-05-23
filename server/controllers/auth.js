@@ -198,3 +198,36 @@ export const bookingschedule = async(req,res) =>{
       res.status(400).send({ok:false});
     }
 }
+
+
+export const appointmentcheduleforpatient = async(req,res) =>{
+  console.log(req.body);
+  const {puid} = req.body;
+        const data = await  BookingSchedule.find({puid}).exec();
+  try{
+   
+    console.log(data);
+    res.json(data);
+  }
+  catch(err)
+  {
+    console.log(err);
+    res.status(400).send({ok:false});
+  }
+}
+
+export const appointmentchedulefortherapist = async(req,res) =>{
+  console.log(req.body);
+  const {uuid} = req.body;
+        const data = await  BookingSchedule.find({uuid}).exec();
+  try{
+   
+    console.log(data);
+    res.json(data);
+  }
+  catch(err)
+  {
+    console.log(err);
+    res.status(400).send({ok:false});
+  }
+}

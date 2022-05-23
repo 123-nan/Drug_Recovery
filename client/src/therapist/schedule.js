@@ -55,7 +55,6 @@ const Schedule = () => {
         <div className="row p-5 m-l-5 text-center">
         {customList != null &&  customList.map((list) => <BookingCard uuid={uid} day={list.day} list={list.date}/>)}
         </div>
-  
         </>
 
     )
