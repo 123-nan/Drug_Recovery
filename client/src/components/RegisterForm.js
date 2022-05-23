@@ -1,5 +1,5 @@
 
-const RegisterForm = ({handleSubmit,name,setName,email,setEmail,password,setPassword,age,setAge,gender,setGender}) => (<form onSubmit={handleSubmit} className="mt-3">
+const RegisterForm = ({handleSubmit,name,setName,email,setEmail,password,setPassword,age,setAge,gender,setGender}) => (<form onSubmit={handleSubmit} className="m-5">
     
 <div className='form-group mb-3'>
     <label className='form-label mb-3'>Your name</label>

@@ -3,6 +3,7 @@ import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import RegisterForm from '../components/RegisterForm';
 import { register } from '../actions/auth';
+import Footer from '../components/Footer';
 
 const Register =({history}) =>{
 
@@ -62,6 +63,7 @@ const Register =({history}) =>{
              </div>
          </div>
         </div>
+        <Footer/>
         </>
     )
 

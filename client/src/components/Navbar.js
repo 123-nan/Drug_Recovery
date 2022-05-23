@@ -36,17 +36,17 @@ export default function Navbar(props) {
       <ul className="nav  justify-content-end">
 
         {!user&& <Link to='/login' className="anchors">
-          <button type="button " class="btn btn-primary">Login</button>
+          <button type="button " class="btnlogin">Login</button>
           </Link>}
                
         {!user&& <Link to='/register' className="anchors">
-        <button type="button nav-item" class="btn btn-primary mx-3">SignUp</button>
+        <button type="button nav-item" class="btnlogin mx-3">SignUp</button>
           </Link>}
 
-          {!user && <li className="nav-item">Are you a Therapist?</li>}
+          {!user && <li className="nav-item mt-2">Are you a Therapist?</li>}
 
           {!user&& <Link to='/therapist-login' className="anchors">
-            <li className="nav-item nav-link" >Login Here</li>
+            <li className=" btnlogin mx-3" >Login Here</li>
           </Link>}
               
           {user && user.token &&  <div class="dropdown">

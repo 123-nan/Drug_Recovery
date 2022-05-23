@@ -1,5 +1,5 @@
 .background{
-    background-image: url("/src/components/images/healthcare_bg.jpg");
+    background-image: url("/src/components/images/homebackground.jpg");
     height: 590px;
     background-size: cover;
     background-position: center;
@@ -25,18 +25,11 @@
     font-weight: 900;
     color: rgb(255, 255, 255);
     text-decoration: wavy;
+    text-shadow: 3px 3px 6px black;
   }
 
   .privacy{
     text-align: center;
   }
 
-  .footer{
-    background-color: black;
-    color: white;
-    text-align: center;
-  }
-
-  .footeritem{
-    font-size: larger;
-  }
+  

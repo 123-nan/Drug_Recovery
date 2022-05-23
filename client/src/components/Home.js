@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from './Footer'
 import "./Home.css"
 import privacypic from "./images/patient_conf.jpg"
 
@@ -6,10 +7,12 @@ export default function Home() {
   return (
     <>
     
-    <div className="background pt-3 ">
-        <div className=" col-md-8 heading  my-5 p-5 ">
-            <h1 className="headinghome">THE MOST VALUABLE </h1><br/>
-            <h1 className="headinghome">THING IS YOUR HEALTH</h1>
+    <div className="row background pt-3 ">
+        <div className="col"></div>
+        <div className="col"></div>
+        <div className=" col heading  my-5 p-5 mr-5 ">
+            <h1 className="headinghome mt-5 text-center">TAKE CARE OF YOUR BODY<br/>IT'S THE ONLY PLACE YOU HAVE TO LIVE</h1>
+            {/* <h1 className="headinghome">THING IS YOUR HEALTH</h1> THE MOST VALUABLE THING IS YOUR HEALTH*/}
         </div>    
     </div>
     <div className="privacy p-5 ">
@@ -23,28 +26,7 @@ export default function Home() {
             </p>
         </div>
     </div>
-    <div className="footer p-5">
-        <h1 className='m-5'>Cure Street</h1>
-       <div className='m-5'>
-        <ul class="nav justify-content-center">
-            <li class="footeritem">
-                <a class="nav-link" href="/">HOME</a>
-            </li>
-            <li class="footeritem">
-                <a class="nav-link" href="/about">ABOUT</a>
-            </li>
-            <li class="footeritem">
-                <a class="nav-link" href="/">TESTIMONIAL</a>
-            </li>
-            <li class="footeritem">
-                <a class="nav-link " href="/">BLOG</a>
-            </li>
-            <li class="footeritem">
-                <a class="nav-link " href="/">CONTCT US</a>
-            </li>
-        </ul>
-        </div>
-    </div>
+    <Footer/>
     </>
   )
 }
