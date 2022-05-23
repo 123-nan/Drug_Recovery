@@ -28,7 +28,7 @@ const TherapistLogin =({history}) =>{
                 type:"LOGGED_IN_USER",
                 payload:res.data,
             })
-
+    
 
             toast.success("Logged In");
             history.push("/");

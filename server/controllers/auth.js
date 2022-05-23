@@ -66,13 +66,15 @@ export const login = async (req,res) => {
 };
 
 export const therapist = async(req,res) =>{
+      
       const data = await Therapist.find().exec();
       console.log(data);
       res.send(data);
 }
 
 export const scheduleTherapist = async(req,res) =>{
-  const data = await ScheduleSchema.find().exec();
+  const {uid} = req.body;
+  const data = await ScheduleSchema.find({uid}).exec();
   console.log(data);
   res.send(data);
 }

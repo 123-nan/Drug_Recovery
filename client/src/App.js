@@ -14,9 +14,9 @@ import TherapistDetail from './user/TherapistDetail';
 import PrivateRouteForAll from './components/PrivateRouteForAll';
 import TherapistDasboard from './user/TherapistDasboard';
 import TherapistLogin from './auth/TherapistLogin';
+import Schedule from './therapist/schedule';
 
 function App() {
-
   return (
     <>
     <ToastContainer />
@@ -27,8 +27,12 @@ function App() {
       <PrivateRouteForAll exact path="/register" component={Register} />
       <PrivateRouteForAll exact path="/therapist-login" component={TherapistLogin} />
       <PrivateRouteForUser exact path="/dashboard" component={DashBoard} />
+      <PrivateRouteForUser exact path="/therapist-detail/schedule" component={Schedule} />
       <PrivateRouteForTherapist exact path="/therdashboard" component={TherapistDasboard} />
       <PrivateRouteForUser exact path="/therapist-detail" component={TherapistDetail} />
+      <PrivateRouteForUser exact path="/therapist-detail/schedule/:id" component={Schedule} />
+ 
+
     </Switch>
     </>
   );

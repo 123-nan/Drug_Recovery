@@ -22,12 +22,17 @@ const TherapistDetail =({history}) =>{
     }, [])
 
 
+  
+
+
 
 
     return (
         <>   
         <div className="row p-5 m-l-5">
-        {listoftherapist!=null &&  listoftherapist.map((list) => <TherapistCard name={list.name} age={list.age} gender={list.gender} experience={list.experience} qualification={list.qualification} image={list.image}/>)}
+        {listoftherapist!=null &&  listoftherapist.map((list) => <TherapistCard name={list.name} age={list.age} gender={list.gender} experience={list.experience} qualification={list.qualification} image={list.image}
+         id={list._id}
+        />)}
         </div>
         
      </>

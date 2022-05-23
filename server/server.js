@@ -12,6 +12,8 @@ app.use(morgan("dev")); // use morgan in dev get req post to show terminal
 app.use(cors());
 app.use(express.json()); // to get data as json
 
+
+
 // route middleware
 readdirSync('./routes').map((r) => app.use("/api",require(`./routes/${r}`)));
 

@@ -1,13 +1,24 @@
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 
-const TherapistCard = ({name,age,gender,experience,image}) => {
+
+const TherapistCard = ({name,age,gender,experience,image,id}) => {
   
     console.log(name);
     if(gender == 'F')
     gender="Female"
     else
     gender="Male"
+
+    const history = useHistory();
+
+    function handleClick(e){
+
+        history.push(`/therapist-detail/schedule/${id}`);
+        
+    }
+
     return (
              <>
             <div className="col-sm-6">
@@ -23,7 +34,7 @@ const TherapistCard = ({name,age,gender,experience,image}) => {
                     <li className="list-group-item">Experience {experience}</li>
                 </ul>
                 <div className="card-body">
-                    <Link to="/" className="card-link">Book Slot</Link>
+                    <button className="btn" onClick={handleClick}>Book Slot</button>
                     <Link to="/" className="card-link">Send A message</Link>
                 </div>
 

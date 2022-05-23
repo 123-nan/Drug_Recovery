@@ -8,7 +8,7 @@ const DashBoard =() =>{
 
     const {user}= useSelector((state) => ({...state}));
 
-    console.log(user.u);
+    
 
 
     return (

@@ -14,9 +14,10 @@ router.post("/therapist-login",therapistlogin)
 
 router.get("/therapist",therapist)
 
-router.get("/schedule-therapist",scheduleTherapist)
+router.post("/schedule-therapist",scheduleTherapist)
 
 router.post("/update-schedule-therapist",editScheduleTherapist)
+
 
 
 module.exports = router;
