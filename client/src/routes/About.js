@@ -6,7 +6,7 @@ export default function About() {
   return (
     <>
     <div className="about">
-    <h1 className="abouthead  mx-5 mb-5">About Us</h1>
+    <h1 className="abouthead  mx-5 mb-5 pt-5">About Us</h1>
     <div className="about-section px-5">
 
         <p className="text">Founded in 2022,Cure Street is an on-demand,digital primary healthcare platform which offers professional
@@ -25,8 +25,8 @@ export default function About() {
 
     </div>
     <h2 className='aboutsechead mt-5'>Our Treatment Approach</h2>
-    <div className="row mx-5 mb-2">
-        <div className="col pb-5">
+    <div className="row  mb-2">
+        <div className=" col-md-6 col-12  pb-5">
             <div className="card cardabout p-5">
                 <h2>Highlights of our Treatment Approach</h2>
                 <ul>
@@ -37,7 +37,7 @@ export default function About() {
             </div>
         </div>
 
-        <div className="col pb-5">
+        <div className=" col-md-6 col-12 pb-5">
             <div className="card cardabout p-5">
                 <h2>Our three simple principles</h2>
                 <br/>
@@ -54,7 +54,7 @@ export default function About() {
 
     <h2 className='aboutsechead'>What Our User's Say</h2>
     <div className="row px-5">
-        <div className="col p-2">
+        <div className="col-md-4 col-12 p-2">
             <div className="card cardabout p-4">
                 <h2>Monica Dixit - 28 years</h2>
                 <p>This website is an incredible source of knowledge and comfort for me. I'm going through one of the
@@ -63,7 +63,7 @@ export default function About() {
         </div>
 
 
-        <div className="col p-2">
+        <div className="col-md-4 col-12 p-2">
             <div className="card cardabout p-4">
                 <h2>Shashank Pandey - 21 years</h2>
 
@@ -73,7 +73,7 @@ export default function About() {
         </div>
 
 
-        <div className="col p-2">
+        <div className="col-md-4 col-12 p-2">
             <div className="card cardabout p-4">
 
                 <h2>Manoj Agrawal - 45 years</h2>

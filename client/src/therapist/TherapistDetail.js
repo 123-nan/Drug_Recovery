@@ -1,14 +1,11 @@
 import axios from "axios";
 import TherapistCard from "../components/TherapistCard";
 import {useEffect,useState} from  'react'
+import '../styles/Footer.css'
 
 const TherapistDetail =({history}) =>{
   
     const [listoftherapist,setList] = useState();
- 
-
-   
-
    
 
 
@@ -22,14 +19,11 @@ const TherapistDetail =({history}) =>{
     }, [])
 
 
-  
-
-
-
 
     return (
         <>   
-        <div className="row p-5 m-l-5">
+        <h1 className="tophead mt-5 " >Therapists</h1>
+        <div className="row pb-5  ml-5 px-5">
         {listoftherapist!=null &&  listoftherapist.map((list) => <TherapistCard name={list.name} age={list.age} gender={list.gender} experience={list.experience} qualification={list.qualification} image={list.image}
          id={list._id}
         />)}

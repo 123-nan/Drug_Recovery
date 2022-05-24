@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from "react-router-dom";
-import './Navbar.css'
+import '../styles/Navbar.css'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom';
@@ -22,15 +22,20 @@ export default function Navbar(props) {
     window.localStorage.removeItem("auth");
     history.push("/login");
   }
-  // console.log(user.user.name);
   return (
     <>
   <nav className="navbar navbar-expand-lg bg-light">
   <div className="container-fluid">
     
-    <Link className="navbar-brand ml-5" to="/">
+    <Link className="navbar-brand ml-5 " to="/">
     <img src={logo} alt="" width="50" height="50" class="d-inline-block align-text-top"/>
       {props.title}</Link>    
+
+      {/* <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02"> */}
+
 
       <ul className="nav  justify-content-end">
 
@@ -64,6 +69,7 @@ export default function Navbar(props) {
        </div>}
 
         </ul>
+        {/* </div> */}
       
   </div>
 </nav>

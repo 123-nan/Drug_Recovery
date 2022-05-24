@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import './Home.css'
+import '../styles/Home.css'
 
 const AppointmentForm = ({ puid, time, status,pname,tname}) => {
 

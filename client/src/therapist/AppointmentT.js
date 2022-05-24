@@ -3,6 +3,7 @@ import axios from 'axios';
 import React from 'react'
 import { useSelector } from 'react-redux';
 import AppointmentForm from '../components/AppointmentForm'
+import '../styles/Footer.css'
 
 export default function AppointmentT() {
 
@@ -32,7 +33,7 @@ export default function AppointmentT() {
 
   return (
     <>
-    
+    <h1 className="tophead mt-5 " >Appointments</h1>
     <div className='row'>
     {list.map((l) => <AppointmentForm time={l.time} puid={l.puid} status={l.status} pname={l.pname}/>)}
     </div>

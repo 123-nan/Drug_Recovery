@@ -1,5 +1,5 @@
 import {useSelector} from 'react-redux'
-import './Navbar.css'
+import '../styles/Navbar.css'
 import { bookingSchedule } from '../actions/auth';
 import { toast } from 'react-toastify';
 
