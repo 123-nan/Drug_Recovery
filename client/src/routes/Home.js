@@ -1,6 +1,7 @@
 import React from 'react'
-import Footer from '../styles/Footer.css'
+import '../styles/Footer.css'
 import '../styles/Home.css'
+import Footer from '../components/Footer'
 
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
          <div className='row'>
 
              <div className='col-5'>
-                  PIyush
+                 cure street
              </div>
 
              <div className='col-7'>
@@ -18,7 +19,7 @@ export default function Home() {
 
          </div>
 
-            
+           <Footer/> 
         </>
     )
 }

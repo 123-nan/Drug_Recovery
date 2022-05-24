@@ -1,15 +1,35 @@
+
+
+
 .bloghead{
     text-align: center;
     font-weight: bolder;
     font-style: italic;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size:50px;
+    color: rgb(61, 39, 9);
 }
 .blogtitle{
     font-weight: bolder;
     font-style: italic;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
 }
 .symptom{
     text-align: left;
+}
+
+
+.blogtext{
+    color:antiquewhite;
+}
+
+.blogimg{
+    justify-content: center;
+}
+
+.blogcard{
+    background-color: rgba(0,0,0,.5);
+    /* opacity: .9; */
+    border-radius: 25px;
 }

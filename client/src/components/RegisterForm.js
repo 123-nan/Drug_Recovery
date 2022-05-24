@@ -30,6 +30,7 @@ const RegisterForm = ({handleSubmit,name,setName,email,setEmail,password,setPass
     value={age}
     onChange={(e) => setAge(e.target.value)}/>
 </div>
+
 <div className='form-group mb-3'>
     <label className='form-label mb-3  text-sans text-violet'>Gender</label>
     <input type="text" className="form-control border border-primary text-sans"
@@ -37,6 +38,28 @@ const RegisterForm = ({handleSubmit,name,setName,email,setEmail,password,setPass
     value={gender}
     onChange={(e) => setGender(e.target.value)}/>
 </div>
+
+
+{/* <div className='form-group mb-3'>
+    
+    <label className='form-label mb-3  text-sans text-violet'>Gender</label>
+
+    <div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked/>
+    <label class="form-check-label mb-3  text-sans text-violet" for="flexRadioDefault1">
+        Male
+    </label>
+    </div>
+
+    <div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
+    <label class="form-check-label mb-3  text-sans text-violet" for="flexRadioDefault2">
+        Female
+    </label>
+    </div>
+
+</div> */}
+
 
 <button className='btn btn-primary text-sans' style={{background:'darkblue'}}>Submit</button>
 

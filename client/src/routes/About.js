@@ -7,7 +7,7 @@ export default function About() {
     <>
     <div className="about">
     <h1 className="abouthead  mx-5 mb-5 pt-5">About Us</h1>
-    <div className="about-section px-5">
+    <div className="about-section mx-5 px-5">
 
         <p className="text">Founded in 2022,Cure Street is an on-demand,digital primary healthcare platform which offers professional
             services that can be availed from the comfort of home,office or anywhere you are comforatble at.
@@ -87,7 +87,7 @@ export default function About() {
     </div>
 
     <h2 className='aboutsechead pt-5 pb-3'>Our Ad-Free Policy</h2>
-        <p className="text px-5 mb-5 p-5">
+        <p className="text px-5 mx-5 mb-5 p-5">
             Cure Street does not accept advertising or sponsored content of any kind. Our website is 100% free of ads and corporate influence and always will be.
         You can trust our independence and intentions. We're not trying to sell you anything, collect your private information, or make money on you. Our only goal is to get you the assistance you need, when you need it.<br/>
        without any ulterior motives or annoying ads getting in the way of the help you're looking for.
