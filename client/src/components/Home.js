@@ -12,7 +12,6 @@ export default function Home() {
         <div className="col"></div>
         <div className=" col heading  my-5 p-5 mr-5 ">
             <h1 className="headinghome mt-5 text-center">TAKE CARE OF YOUR BODY<br/>IT'S THE ONLY PLACE YOU HAVE TO LIVE</h1>
-            {/* <h1 className="headinghome">THING IS YOUR HEALTH</h1> THE MOST VALUABLE THING IS YOUR HEALTH*/}
         </div>    
     </div>
     <div className="privacy p-5 ">

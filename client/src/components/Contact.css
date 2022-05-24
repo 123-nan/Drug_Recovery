@@ -11,7 +11,7 @@
 .contact-section
 {
   min-height: 100vh;
-  background:url("/src/components/images/drugs-bg.jpg") no-repeat;
+  background:url("/src/components/images/back.jpg") no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
