@@ -46,7 +46,7 @@ const Register =({history}) =>{
        
         <div className='container'>
          <div className='row'>
-             <div className='col-md-6 offset-md-3'>
+             <div className='col-md-8 offset-md-3'>
                  <RegisterForm 
                   handleSubmit={handleSubmit}
                   name={name}

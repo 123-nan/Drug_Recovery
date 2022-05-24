@@ -23,9 +23,9 @@ const TherapistCard = ({name,age,gender,experience,image,id}) => {
              <>
             <div className="col-sm-4 border-secondary">
             <div className="card text-center m-5 p-5 background-cadet text-white" style={{width: '18rem'}}>
-                <img className="card-img-top" src={image}/>
-                <div className="card-body">
-                    <h5 className="card-title text-sans" >{name}</h5>
+                <img className="card-img-top" style={{height:'130px'}} src={image}/>
+                <div className="card-body " style={{color:'black'}}>
+                    <h5 className="card-title text-sans" style={{height:'50px'}} >{name}</h5>
                     <p className="card-text text-sans">He is the one of the best doctor available</p>
                 </div>
                 <ul className="list-group list-group-flush p-1" >

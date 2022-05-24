@@ -7,8 +7,8 @@ export default function Contact() {
     <>
     
     
-    <div className="contact-section">
-        <div className="contact-info">
+    <div className="row contact-section">
+        <div className=" col-md-6 col-12 contact-info">
         <h1 className='contacthead mb-3'>CONTACT US</h1>
             <div> <i className="fa-solid fa-location-dot"></i>Address , City , Country</div>
             <div> <i className="fa-solid fa-envelope"></i>contact@email.com</div>
@@ -16,7 +16,7 @@ export default function Contact() {
             <div> <i className="fa-solid fa-clock"></i>Mon-Fri 8:00 AM to 5:00PM</div>
         </div>
 
-        <div className="contact-form mt-5 pt-4">
+        <div className=" col-md-6 col-12 contact-form mt-5 mx-4 p-4">
         
         <form className="contact" action="" method="post">
             <input type="text" name="name" className="text-box" placeholder="Your name" required/>

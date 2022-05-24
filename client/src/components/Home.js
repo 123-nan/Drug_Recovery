@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from './Footer'
-import "./Home.css"
+import "../style/Home.css"
 import privacypic from "./images/patient_conf.jpg"
 
 export default function Home() {

@@ -6,7 +6,11 @@
 
 .testhead{
     text-align: center;
-    font-family: sans-serif;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:50px;
+    color: rgb(61, 39, 9);
 }
 
 .testcontainer {

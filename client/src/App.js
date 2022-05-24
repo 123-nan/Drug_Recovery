@@ -23,6 +23,7 @@ import ChatRoom from './therapist/chatroom';
 import Joinroom from './therapist/joinroom';
 import Testimonial from './components/Testimonial';
 import Contact from './routes/Contact';
+import Blog from './routes/Blogs';
 
 
 function App() {

@@ -18,19 +18,19 @@ const DashBoard =() =>{
         <h1 className=" dash_head  mb-2 px-5 pt-5 ">Dashboard</h1>
             
         <div className="row my-2">
-        <div className="card col justify-content-center m-5 p-2" style={{width: '18rem'}}>
+            <div className="card col-md-4 col-12 justify-content-center m-5 p-2" style={{width: '20rem'}}>
             <img src={cover} class="card-img-top" alt="..."/>
             <div className="card-body">
                 <Link to="/therapist-detail" className="btn1 text-sans">Therapists</Link>
             </div>
             </div>
-            <div className="card col m-5 p-2" style={{width: '18rem'}}>
+            <div className="card col-md-4 col-12 m-5 p-2" style={{width: '20rem'}}>
             <img src={appcover} class="card-img-top" alt="..."/>
             <div className="card-body">
                 <Link to="/patient-appointment" className="btn1 text-sans">Appointments</Link>
             </div>
             </div>
-            <div className="card col m-5 p-2" style={{width: '18rem'}}>
+            <div className="card col-md-4 col-12 m-5 p-2" style={{width: '20rem'}}>
             <img src={recordcover} class="card-img-top" alt="..." sytle={{height:'10'}}/>
             <div className="card-body">
                 <Link to="/" className="btn1 text-sans text-violet">Medical Records</Link>

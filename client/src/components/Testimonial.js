@@ -37,7 +37,7 @@ export default function Testimonial() {
     <div className="testcontainer mx-5 p-3">
         <h3>Rukhsana Khatoon-45 years</h3>
         <p>After much worry,grief and blocked attempts to navigate my son's healthcare,the
-            professionalism,kindness,compassion shown to my son by Cure Street Doctors, succeeded any avenue I had
+            professionalism, kindness, compassion shown to my son by Cure Street Doctors, succeeded any avenue I had
             endured.5 stars to these fine individuals who shall remain in my memory.</p>
     </div>
 
