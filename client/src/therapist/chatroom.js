@@ -59,13 +59,19 @@ const ChatRoom = () => {
     return (
         <>
 
-            {flag && <div className="row chat-background" style={{ marginTop: "80px" }}>
+            {flag && <div className="row joinroom_row_margin">
                 <div className="col center">
-                    <div className="card" style={{ width: '18rem' }}>
+                    <div className="card joinroom_uppercard_margin">
 
                         <div className="card-body overflow-auto text-white background-violet">
-                            <input type="text" placeholder="John..." value={username} disabled />
-                            <input type="text" placeholder="ROOM ID..." value={room} disabled />
+                            <div className='input_margin'>
+                            <label>NAME:</label>
+                            <input className='input_margin_joinroom' type="text" placeholder="John..." value={username} disabled />
+                            </div>
+                            <div className='input_margin'>
+                            <label>UUID:</label>
+                            <input className='input_margin_joinroom' type="text" placeholder="ROOM ID..." value={room} disabled />
+                            </div>
                             <p className="card-text">Join Chat to start Chatting</p>
                             <button class="btn btn-primary background-violet" onClick={joinRoom} > Join Chat</button>
                         </div>
@@ -75,11 +81,11 @@ const ChatRoom = () => {
                 </div>
             </div>}
 
-            {!flag && <div className="row" style={{ marginTop: "100px" }}>
+            {!flag && <div className="row row-card">
                 <div className="col center">
                     <div className="card cards border border-success" style={{ width: '700px' }}>
                         <div className="card cards">
-                            <div className="card-header card-headera msg_head">
+                            <div className="card-header msg_head">
                                 <div className="d-flex bd-highlight">
                                     <div className="img_cont">
                                         <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg " class="rounded-circle user_img" />
@@ -109,7 +115,7 @@ const ChatRoom = () => {
                                 </div>
                                 
                                 <div className="img_cont_msg">
-                                    {msg.auth}
+                                    {msg.author}
                                 </div>
                             </div>)})}
 
@@ -117,11 +123,11 @@ const ChatRoom = () => {
                             <div className="card-footer">
                                 <div className="input-group">
                                     <div className="input-group-append">
-                                        <span className="input-group-text attach_btn"><i class="fas fa-paperclip"></i></span>
+                                        
                                     </div>
-                                    <input tyoe="text" class="form-control type_msg" placeholder="Type your message..." onChange={(e) => { setMessage(e.target.value) }}/>
+                                    <input type="text" class="form-control type_msg" placeholder="Type your message..." onChange={(e) => { setMessage(e.target.value) }}/>
                                     <div className="input-group-append">
-                                        <button className="input-group-text send_btn"><i class="fas fa-location-arrow" onClick={sendMessage}>Send Message</i></button>
+                                        <span className="input-group-text send_btn"><i class='fa fa-send send_icon' style={{color: 'blue'}} onClick={sendMessage}></i></span>
                                     </div>
                                 </div>
                             </div>

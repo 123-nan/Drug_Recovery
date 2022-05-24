@@ -8,12 +8,10 @@ body,html{
 
 .chat{
     margin-top: auto;
-    width: 700px;
     margin-bottom: auto;
 }
 .cards{
     height: 500px;
-    width: 700px;
     border-radius: 15px !important;
     background-color: rgba(0,0,0,0.4) !important;
 }
@@ -24,17 +22,15 @@ body,html{
 }
 .msg_card_body{
     overflow-y: auto;
-    width: 700px;
 }
 .card-headera{
     border-radius: 15px 15px 0 0 !important;
     border-bottom: 0 !important;
-    width: 700px;
 }
 .card-footer{
 border-radius: 0 0 15px 15px !important;
     border-top: 0 !important;
-    width: 700px;
+   
 }
 .container{
     align-content: center;
@@ -114,7 +110,7 @@ background-color: rgba(0,0,0,0.3) !important;
 .img_cont_msg{
     height: 40px;
     text-align: center;
-    width: 40px;
+    width: 80px;
     font-size: small;
     color: white;
 }
@@ -231,6 +227,12 @@ background-color: rgba(0,0,0,0.2);
 .contacts_card{
 margin-bottom: 15px !important;
 }
+}
+
+
+.send_icon{
+    width: 30px;
+    height: 30px;
 }
 
 

@@ -5,6 +5,7 @@ import {Switch,Route} from 'react-router-dom'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from "react-toastify";
 import Navbar from './components/Navbar'
+import PdfGenerator from './therapist/pdfgenerator';
 import 'react-toastify/dist/ReactToastify.css';
 import PrivateRouteForUser from './components/PrivateRoute';
 import PrivateRouteForTherapist from './components/PrivateRouteForTherapist';
@@ -22,7 +23,7 @@ import ChatRoom from './therapist/chatroom';
 import Joinroom from './therapist/joinroom';
 import Testimonial from './components/Testimonial';
 import Contact from './routes/Contact';
-import Blog from './routes/Blog';
+
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
       <PrivateRouteForUser exact path="/dashboard" component={DashBoard} />
       <PrivateRouteForUser exact path="/therapist-detail/schedule" component={Schedule} />
       <PrivateRouteForTherapist exact path="/therdashboard" component={TherapistDasboard} />
+      <Route exact path="/generate-report/:id" component={PdfGenerator} />
       <PrivateRouteForUser exact path="/therapist-detail" component={TherapistDetail} />
       <PrivateRouteForUser exact path="/therapist-detail/schedule/:id" component={Schedule} />
       <Route exact path="/about" component={About} />
@@ -46,7 +48,7 @@ function App() {
       <Route exact path="/therapist-appointment" component={AppointmentT} />
       <Route exact path="/testimonial" component={Testimonial} />
       <Route exact path="/contact" component={Contact} />
-      <Route exact path="/blog" component={Blog} />
+      
     </Switch>
     </>
   );

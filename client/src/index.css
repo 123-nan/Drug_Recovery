@@ -54,6 +54,37 @@ code {
 .cols-11 {width: 91.66%;}
 .cols-12 {width: 100%;}
 
+
+
+
+.video-logo{
+  height: 286px;
+}
+
+.join-room-margin{
+  margin: 20px;
+}
+
+.joinroom_row_margin{
+  margin-top: 100px;
+}
+
+.joinroom_uppercard_margin{
+  margin: 100px;
+}
+.input_margin{
+  margin: 30px;
+}
+.input_margin_joinroom{
+  margin-left: 10px;
+}
+
+
+
+
+
+
+
 @media only screen and (max-width: 500px) {
 
   .col-5,.col-1,.col-2,.col-3,.col-4,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12{
@@ -65,5 +96,14 @@ code {
   .cols-4{
     width: 100%;
   }
+  .input_margin_joinroom{
+    margin-left: 10px;
+    width: 150px;
+  }
+  .input_margin{
+    padding-bottom: 20px;
+    margin-left: 0px;
+  }
+  
   
 }

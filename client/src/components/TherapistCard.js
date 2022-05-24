@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
-import "./Navbar.css"
+import "../styles/Navbar.css"
 
 
 const TherapistCard = ({name,age,gender,experience,image,id}) => {

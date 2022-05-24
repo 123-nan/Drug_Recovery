@@ -1,5 +1,5 @@
 import {useSelector} from 'react-redux'
-import './Navbar.css'
+import '../styles/Navbar.css'
 import { bookingSchedule } from '../actions/auth';
 import { toast } from 'react-toastify';
 
@@ -68,7 +68,7 @@ const BookingCard =({day,list,uuid,tname}) =>{
 
   <ul className="list-group list-group-flush">
 
-    {list!=null &&  list.map((list) =><li className="list-group-item cursor" onClick={handleClick}>{list[0] >= '1' && list[1] >= '2'?list+" PM":list+" AM"}</li>)}
+    {list!=null &&  list.map((list) =><li className="list-group-item cursor" onClick={handleClick}>{(list[0] >= '1' && list[1] >= '2')||(list[0]>=2)?list+" PM":list+" AM"}</li>)}
 
   </ul>
   </div>
