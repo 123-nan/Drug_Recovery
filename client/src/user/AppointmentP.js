@@ -32,9 +32,9 @@ export default function AppointmentP() {
 
   return (
     <>
-    
+     <div className="row p-5 m-l-5">
     {list.map((l) => <AppointmentForm time={l.time} puid={l.puid} status={l.status} pname={l.pname} tname={l.tname}/>)}
-    
+    </div>
     </>
   )
 }

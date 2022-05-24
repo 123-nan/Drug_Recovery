@@ -1,6 +1,6 @@
 import React from 'react'
-import './Blog.css'
-import Footer from './Footer'
+import '../styles/Blog.css'
+import Footer from '../components/Footer'
 
 export default function Blog() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from './Footer'
-import './Testimonial.css'
+import '../styles/Testimonial.css'
 
 export default function Testimonial() {
   return (

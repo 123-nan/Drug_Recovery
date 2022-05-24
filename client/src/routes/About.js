@@ -1,6 +1,6 @@
 import React from 'react'
-import "./About.css"
-import Footer from './Footer'
+import "../styles/About.css"
+import Footer from '../components/Footer'
 
 export default function About() {
   return (

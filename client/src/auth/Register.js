@@ -39,8 +39,8 @@ const Register =({history}) =>{
    
     return (
         <>
-        <div className="container-fluid h1 bg-secondary p-5 text-center">
-           <h1>Register</h1>
+        <div className="container-fluid h1 p-5 text-center background-violet">
+           <h1 className='text-white text-sans'>Register</h1>
         </div>
 
        

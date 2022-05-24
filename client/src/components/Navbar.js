@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from "react-router-dom";
-import PropTypes from 'prop-types'
 import './Navbar.css'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
@@ -54,12 +53,12 @@ export default function Navbar(props) {
                {user.user.name}
             </button>
             <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuButton1">
-            <Link to='/dashboard'>
+            {user.u=="patient" && <Link to='/dashboard'>
                 <li className="dropdown-item dropitem">Dashboard</li>
-            </Link>
-            <Link to='/therdashboard'>
+            </Link>}
+            {user.u=="therapist" && <Link to='/therdashboard'>
                 <li className="dropdown-item dropitem"> Therapist Dashboard</li>
-            </Link>
+            </Link>}
              <li className="dropdown-item dropitem" onClick={logout}>LogOut</li>
             </ul>
        </div>}
@@ -68,14 +67,12 @@ export default function Navbar(props) {
       
   </div>
 </nav>
-</>
+
+
+
+  
+    </>
   )
+
 }
 
-Navbar.propTypes={
-    title: PropTypes.string
-}
-
-Navbar.defaultProps={
-    title: "Set title here"
-}

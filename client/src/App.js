@@ -1,5 +1,4 @@
-
-import Home from './components/Home'
+import Home from './routes/Home'
 import Register from "./auth/Register";
 import Login from "./auth/Login";
 import {Switch,Route} from 'react-router-dom'
@@ -10,20 +9,20 @@ import 'react-toastify/dist/ReactToastify.css';
 import PrivateRouteForUser from './components/PrivateRoute';
 import PrivateRouteForTherapist from './components/PrivateRouteForTherapist';
 import DashBoard from './user/Dashboard'
-import TherapistDetail from './user/TherapistDetail';
+import TherapistDetail from './therapist/TherapistDetail';
 import PrivateRouteForAll from './components/PrivateRouteForAll';
-import TherapistDasboard from './user/TherapistDasboard';
+import TherapistDasboard from './therapist/TherapistDasboard';
 import PrivateRouteForNone from './components/PrivateForNone';
 import TherapistLogin from './auth/TherapistLogin';
 import Schedule from './therapist/schedule';
-import About from './components/About';
+import About from './routes/About';
 import AppointmentP from './user/AppointmentP';
-import AppointmentT from './user/AppointmentT';
+import AppointmentT from './therapist/AppointmentT';
 import ChatRoom from './therapist/chatroom';
 import Joinroom from './therapist/joinroom';
 import Testimonial from './components/Testimonial';
-import Contact from './components/Contact';
-import Blog from './components/Blog';
+import Contact from './routes/Contact';
+import Blog from './routes/Blog';
 
 function App() {
   return (
@@ -36,7 +35,7 @@ function App() {
       <PrivateRouteForAll exact path="/register" component={Register} />
       <PrivateRouteForAll exact path="/therapist-login" component={TherapistLogin} />
       <PrivateRouteForNone exact path="/joinroom/:id" component ={Joinroom} />
-      <PrivateRouteForNone exact path="/chat-room" component ={ChatRoom} />
+      <PrivateRouteForNone exact path="/chat-room/:id" component ={ChatRoom} />
       <PrivateRouteForUser exact path="/dashboard" component={DashBoard} />
       <PrivateRouteForUser exact path="/therapist-detail/schedule" component={Schedule} />
       <PrivateRouteForTherapist exact path="/therdashboard" component={TherapistDasboard} />

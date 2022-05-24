@@ -4,9 +4,7 @@ import { useSelector } from "react-redux";
 const PrivateRouteForUser = ({...rest}) => {
     const {user} = useSelector((state) => ({...state}));
 
-    let flag = false;
-    const tp = user.u;
-    const typ = "patient";
+    
     
     if(user == null)
     return false?<Route {...rest} /> : <Redirect to="/login"/>;

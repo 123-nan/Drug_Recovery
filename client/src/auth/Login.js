@@ -44,8 +44,8 @@ const Login =({history}) =>{
 
     return (
         <>
-         <div className="container-fluid bg-secondary h1 p-5 text-center">
-         <h1>Login</h1>
+         <div className="container-fluid h1 p-5 text-center background-violet">
+         <h1 className='text-white text-sans'>Login</h1>
         </div>
         <div className='container'>
             <div className='row'>

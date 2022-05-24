@@ -43,8 +43,8 @@ const TherapistLogin =({history}) =>{
 
     return (
         <>
-        <div className="container-fluid bg-secondary h1 p-5 text-center">
-         <h1>Therapist Login</h1>
+        <div className="container-fluid h1 p-5 text-center background-violet">
+         <h1 className='text-sans text-white'>Therapist Login</h1>
         </div>
         <div className='container'>
             <div className='row'>

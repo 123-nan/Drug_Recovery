@@ -32,7 +32,7 @@ const Schedule = () => {
         customList = new Array();
         for (const key in data) {
 
-            if(key!="_id" && key!="uid" && key !="createdAt" && key!="updatedAt" && key !="__v" && key != "name")
+            if(key!="_id" && key!="uid" && key !="createdAt" && key!="updatedAt" && key !="__v" && key != "name" && key != "sunday")
             {
 
                 // console.log(`${key}: ${data[key]}`);
