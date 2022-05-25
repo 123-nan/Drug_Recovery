@@ -56,6 +56,45 @@ const ChatRoom = () => {
     }, [socket]);
 
 
+    const handleEnter =(e) =>{
+       
+        if (e.keyCode === 13) {
+            sendMessage();
+          }
+    }
+
+    const onleft = (message,time,author) =>{
+
+        if(author == username)
+        return(
+        <div className="d-flex justify-content-end mb-4">
+                                    
+                                <div className="msg_cotainer_send">
+                                    {message}
+                                    <span class="msg_time_send">{time}</span>
+                                    
+                                </div>
+                                
+                                
+                            </div>
+        )
+        else
+        return(
+            <div className="d-flex justify-content-start mb-4">
+                                        
+                                    <div className="msg_cotainer_send">
+                                        {message}
+                                        <span class="msg_time_send">{time}</span>
+                                        
+                                    </div>
+                                    
+                                    
+                                </div>
+            )
+
+    }
+
+
     return (
         <>
 
@@ -92,7 +131,7 @@ const ChatRoom = () => {
                                         <span className="online_icon"></span>
                                     </div>
                                     <div className="user_info">
-                                        <span>Chat with Doctor</span>
+                                        <span>Chat with {user.u.charAt(0).toUpperCase() + user.u.slice(1)==="Patient"?"Therapist":"Patient"}</span>
                                     </div>
 
                                 </div>
@@ -104,20 +143,7 @@ const ChatRoom = () => {
 
 
 
-                            {messageList.map((msg) => {
-                                return (
-                                <div className="d-flex justify-content-end mb-4">
-                                    
-                                <div className="msg_cotainer_send">
-                                    {msg.message}
-                                    <span class="msg_time_send">{msg.time}</span>
-                                    
-                                </div>
-                                
-                                <div className="img_cont_msg">
-                                    {msg.author}
-                                </div>
-                            </div>)})}
+                            {messageList.map((msg) =>  onleft(msg.message,msg.time,msg.author))}
 
                             </div>
                             <div className="card-footer">
@@ -125,7 +151,7 @@ const ChatRoom = () => {
                                     <div className="input-group-append">
                                         
                                     </div>
-                                    <input type="text" class="form-control type_msg" placeholder="Type your message..." onChange={(e) => { setMessage(e.target.value) }}/>
+                                    <input type="text" class="form-control type_msg" onKeyDown={handleEnter} placeholder="Type your message..." onChange={(e) => { setMessage(e.target.value) }}/>
                                     <div className="input-group-append">
                                         <span className="input-group-text send_btn"><i class='fa fa-send send_icon' style={{color: 'blue'}} onClick={sendMessage}></i></span>
                                     </div>

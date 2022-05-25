@@ -40,3 +40,6 @@
 .row{
     margin-right: 0px;
 }
+.cursor{
+    cursor: pointer;
+}

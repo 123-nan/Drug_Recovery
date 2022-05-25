@@ -27,6 +27,7 @@ const PdfGenerator= () => {
 
         // doc.addPage("a4","p");
         doc.text('Medical Report',90,10);
+        doc.text(new Date(Date.now()).getDate() + "/" + new Date(Date.now()).getMonth() + "/" + new Date(Date.now()).getFullYear(),170,10);
         doc.setFontSize(10);
         doc.line(5,15,200,15,'S');
 
@@ -76,6 +77,7 @@ const PdfGenerator= () => {
 
         doc.text('Digitally Signed By',137,250);
         doc.text('Piyush Jaiswal',140,260);
+        
 
 
 
