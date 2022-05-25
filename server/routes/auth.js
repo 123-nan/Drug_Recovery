@@ -1,5 +1,5 @@
 import express from 'express';
-import { register ,login, scheduleTherapist, editScheduleTherapist, therapistregister, therapistlogin,bookingschedule, appointmentcheduleforpatient, appointmentchedulefortherapist} from '../controllers/auth';
+import { register ,login, scheduleTherapist, editScheduleTherapist, therapistregister, therapistlogin,bookingschedule, appointmentcheduleforpatient, appointmentchedulefortherapist, reportInsert, getReport} from '../controllers/auth';
 import { therapist } from '../controllers/auth';
 const router = express.Router();
 
@@ -24,6 +24,10 @@ router.post("/book-schedule",bookingschedule)
 router.post("/get-appointmet-patient",appointmentcheduleforpatient)
 
 router.post("/get-appointmet-therapist",appointmentchedulefortherapist)
+
+router.post("/upload-report",reportInsert)
+
+router.post("/get-report",getReport)
 
 
 

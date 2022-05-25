@@ -17,6 +17,7 @@ import PrivateRouteForNone from './components/PrivateForNone';
 import TherapistLogin from './auth/TherapistLogin';
 import Schedule from './therapist/schedule';
 import About from './routes/About';
+import MedicalRecord from './user/report';
 import AppointmentP from './user/AppointmentP';
 import AppointmentT from './therapist/AppointmentT';
 import ChatRoom from './therapist/chatroom';
@@ -40,8 +41,9 @@ function App() {
       <PrivateRouteForNone exact path="/chat-room/:id" component ={ChatRoom} />
       <PrivateRouteForUser exact path="/dashboard" component={DashBoard} />
       <PrivateRouteForUser exact path="/therapist-detail/schedule" component={Schedule} />
+      <PrivateRouteForUser exact path="/reports/:id" component={MedicalRecord} />
       <PrivateRouteForTherapist exact path="/therdashboard" component={TherapistDasboard} />
-      <Route exact path="/generate-report/:id" component={PdfGenerator} />
+      <PrivateRouteForTherapist exact path="/generate-report/:id" component={PdfGenerator} />
       <PrivateRouteForUser exact path="/therapist-detail" component={TherapistDetail} />
       <PrivateRouteForUser exact path="/therapist-detail/schedule/:id" component={Schedule} />
       <Route exact path="/about" component={About} />

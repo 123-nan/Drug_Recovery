@@ -3,12 +3,21 @@ import cover from "./images/cover.jpg"
 import appcover from "./images/app_cover.jpg"
 import recordcover from "./images/recover.jpg"
 import '../styles/Dashboard.css'
+import { useHistory } from "react-router-dom"
 import { Link } from "react-router-dom"
 import Footer from "../components/Footer"
 
 const DashBoard =() =>{
 
     const {user}= useSelector((state) => ({...state}));
+
+    const puid = user.user._id;
+    const history = useHistory();
+
+
+    const medicalRecords =()=>{
+         history.push(`/reports/${puid}`);
+    }
 
 
 
@@ -33,7 +42,7 @@ const DashBoard =() =>{
             <div className="card col-md-4 col-12 m-5 p-2" style={{width: '20rem'}}>
             <img src={recordcover} class="card-img-top" alt="..." sytle={{height:'10'}}/>
             <div className="card-body">
-                <Link to="/" className="btn1 text-sans text-violet">Medical Records</Link>
+                <button className="btn1 text-sans text-violet" onClick={medicalRecords}>Medical Records</button>
             </div>
             </div>
         </div>

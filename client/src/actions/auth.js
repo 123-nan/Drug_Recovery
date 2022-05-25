@@ -14,3 +14,5 @@ export const bookingSchedule = async(data) => await axios.post(`${process.env.RE
 export const appointemtfortherapist= async(data) => await axios.post(`${process.env.REACT_APP_API}/get-appointment-therapist`,data);
 
 export const appointmentforpatient = async(data) => await axios.post(`${process.env.REACT_APP_API}/get-appointment-patient`,data);
+
+export const uploadreport = async(data) => await axios.post(`${process.env.REACT_APP_API}/upload-report`,data);
