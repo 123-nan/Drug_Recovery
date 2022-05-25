@@ -1,9 +1,9 @@
 import React from 'react'
 import image from "../components/images/img1.jpeg"
-import img2 from "../components/images/6.jpg"
+import img2 from "../components/images/img5.jpg"
 import img3 from "../components/images/img2.png"
 import img4 from "../components/images/img3.png"
-import img5 from "../components/images/1.jpg"
+import img5 from "../components/images/img4.jpg"
 import '../styles/Blog.css'
 import Footer from '../components/Footer'
 

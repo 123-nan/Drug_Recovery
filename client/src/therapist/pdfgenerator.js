@@ -1,4 +1,4 @@
-import '@progress/kendo-theme-material/dist/all.css'
+// import '@progress/kendo-theme-material/dist/all.css'
 import React from 'react';
 import {useRef} from 'react'
 import {toast} from 'react-toastify'
@@ -21,6 +21,7 @@ const PdfGenerator= () => {
     const handleClick= async () =>{
 
        
+        
         const doc = new jsPDF();
         // doc.addImage(logo, 'JPEG', 15, 40, 180, 160)
 
@@ -29,7 +30,7 @@ const PdfGenerator= () => {
         doc.setFontSize(10);
         doc.line(5,15,200,15,'S');
 
-        doc.text('Care Street',10,25);
+        doc.text('Cure Street',10,25);
         doc.text('GSTIN:025000SD40D1F41F',140,25);
         doc.text('Expert in Caring',140,30);
         doc.text('Yamuna Gate, TeliarGanj',140,35);
@@ -58,7 +59,7 @@ const PdfGenerator= () => {
         doc.line(10,112,40,112,'S');
         doc.text('Allergies with Someone',20,120);
         doc.text('Allergies with Akriti',20,125);
-        doc.text('Allergies with Piyus',20,130);
+        doc.text('Allergies with Piyush',20,130);
 
         doc.text('Diagnosis',10,140);
         doc.line(10,142,40,142,'S');
