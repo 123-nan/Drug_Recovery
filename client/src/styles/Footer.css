@@ -17,3 +17,8 @@
     font-style: italic;
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
+
+  .gridalign{
+      display: flex;
+      justify-content: center;
+  }

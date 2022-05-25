@@ -4,6 +4,7 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import AppointmentForm from '../components/AppointmentForm'
 import '../styles/Footer.css'
+import Footer from '../components/Footer';
 
 export default function AppointmentP() {
 
@@ -34,9 +35,10 @@ export default function AppointmentP() {
   return (
     <>
     <h1 className="tophead mt-5 " >Appointments</h1>
-     <div className="row p-5 m-l-5">
+     <div className="row px-5 pb-5 m-l-5 gridalign">
     {list.map((l) => <AppointmentForm time={l.time} puid={l.puid} status={l.status} pname={l.pname} tname={l.tname}/>)}
     </div>
+    <Footer/>
     </>
   )
 }

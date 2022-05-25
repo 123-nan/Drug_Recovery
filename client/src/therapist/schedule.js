@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom"
 import {useEffect,useState} from 'react'
 import axios from "axios";
 import BookingCard from "../components/BookingCard";
+import '../styles/Footer.css'
+import Footer from "../components/Footer";
 
 
 const Schedule = () => {
@@ -55,9 +57,11 @@ const Schedule = () => {
 
     return (
         <>
+        <h1 className="tophead mt-5">Book Your Slot</h1>
         <div className="row p-5 m-l-5 text-center">
         {customList != null &&  customList.map((list) => <BookingCard uuid={uid} day={list.day} list={list.date} tname={therapist}/>)}
         </div>
+        <Footer/>
         </>
 
     )

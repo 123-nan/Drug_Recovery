@@ -1,6 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import '../styles/Home.css'
+import '../styles/Footer.css'
 
 const AppointmentForm = ({ puid, time, status,pname,tname}) => {
 
@@ -40,8 +41,8 @@ const AppointmentForm = ({ puid, time, status,pname,tname}) => {
   return (
     <>
 
-      <div className="component text-center col-md-3 m-5">
-        <div className="card">
+      <div className="component text-center col-md-3 m-5 gridalign">
+        <div className="card" style={{width:"18rem"}}>
           <div class="card-header background-violet text-white">
             {time.substring(6,16)}
           </div>

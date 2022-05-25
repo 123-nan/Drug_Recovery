@@ -2,6 +2,7 @@ import {useSelector} from 'react-redux'
 import '../styles/Navbar.css'
 import { bookingSchedule } from '../actions/auth';
 import { toast } from 'react-toastify';
+import '../styles/Footer.css'
 
 const BookingCard =({day,list,uuid,tname}) =>{
        
@@ -17,8 +18,6 @@ const BookingCard =({day,list,uuid,tname}) =>{
 
    
     let flag = new Date(Date.now()).getDay() - 1;
-    
-    
     
 
     const handleClick = async (e)=>{
@@ -37,9 +36,6 @@ const BookingCard =({day,list,uuid,tname}) =>{
       else if(currentTime > detail)
       { toast.dark(`Booking Allowed after ${currentTime}`);   return;}
       
-
-
-     
 
       var month = new Date().getMonth();
       if(month <= 9)
@@ -61,10 +57,11 @@ const BookingCard =({day,list,uuid,tname}) =>{
 
 
     return (<>
-        <div className="col-sm-3 p-3 text-center ">
-   <div className="card background-cadet" style={{width: '18rem'}}>
+    
+        <div className="col-sm-4 p-3 text-center  gridalign">
+   <div className="card background-cadet" style={{width: '18rem',height:'23rem'}}>
 
-   {daylist[flag] == day ?<h1 className='text-sans text-success'>{day.charAt(0).toUpperCase() + day.slice(1)}</h1>:<h1 className='text-white text-sans'>{day.charAt(0).toUpperCase() + day.slice(1)}</h1>}
+   {daylist[flag] == day ?<h2 className='pt-3 tophead text-sans text-success'>{day.charAt(0).toUpperCase() + day.slice(1)}</h2>:<h2 className='pt-3 text-sans tophead'>{day.charAt(0).toUpperCase() + day.slice(1)}</h2>}
 
   <ul className="list-group list-group-flush">
 

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import "../styles/Navbar.css"
+import '../styles/Footer.css'
 
 
 const TherapistCard = ({name,age,gender,experience,image,id}) => {
@@ -21,12 +22,12 @@ const TherapistCard = ({name,age,gender,experience,image,id}) => {
 
     return (
              <>
-            <div className="col-sm-4 border-secondary">
-            <div className="card text-center m-5 p-5 background-cadet text-white" style={{width: '18rem'}}>
-                <img className="card-img-top" style={{height:'130px'}} src={image}/>
+            <div className="col-md-4 col-sm-6 col-12 border-secondary gridalign">
+            <div className="card text-center my-4 mx-2 p-5 background-cadet " style={{width:'300px'}} >
+                <img className="card-img-top" style={{height:'140px'}} src={image}/>
                 <div className="card-body " style={{color:'black'}}>
-                    <h5 className="card-title text-sans" style={{height:'50px'}} >{name}</h5>
-                    <p className="card-text text-sans">He is the one of the best doctor available</p>
+                    <h5 className="card-title text-sans"  >{name}</h5>
+                    <p className="card-text text-sans">He/She is one of the best doctor available</p>
                 </div>
                 <ul className="list-group list-group-flush p-1" >
                     <li className="list-group-item p-1">Age - {age}</li>
