@@ -24,6 +24,7 @@ import Joinroom from './therapist/joinroom';
 import Testimonial from './components/Testimonial';
 import Contact from './routes/Contact';
 import Blog from './routes/Blogs';
+import PdfForm from './components/PdfForm';
 
 
 function App() {
@@ -49,7 +50,8 @@ function App() {
       <Route exact path="/therapist-appointment" component={AppointmentT} />
       <Route exact path="/testimonial" component={Testimonial} />
       <Route exact path="/contact" component={Contact} />
-      
+      <Route exact path="/blog" component={Blog} />
+      <Route exact path="/pdf-form" component={PdfForm} />
     </Switch>
     </>
   );
