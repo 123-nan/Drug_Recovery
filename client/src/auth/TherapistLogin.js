@@ -43,19 +43,10 @@ const TherapistLogin =({history}) =>{
 
     return (
         <>
-        <div className="container-fluid h1 p-5 text-center background-violet">
-         <h1 className='text-sans text-white'>Therapist Login</h1>
-        </div>
-        <div className='container'>
-            <div className='row'>
-                <div className='col-md-8 offset-md-3'>
                     <LoginForm 
                     handleSubmit={handleSubmit} email={email} setEmail={setEmail} password={password} setPassword={setPassword}
                     />
                
-                </div> 
-            </div>
-        </div>
         <Footer/>
         </>
     )
