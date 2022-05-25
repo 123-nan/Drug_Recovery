@@ -4,10 +4,6 @@ import '../styles/Login.css'
 const LoginForm= ({handleSubmit,email,setEmail,password,setPassword}) => (
 <>
 <div className="loginform">
-    <div class="backgroundlogin">
-       <div class="shape"></div>
-       <div class="shape"></div>
-   </div>
    <form onSubmit={handleSubmit} className="login-form">
        <h3>Login Here</h3>
        <label for="email">Email</label>

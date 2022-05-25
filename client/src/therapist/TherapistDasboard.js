@@ -16,7 +16,7 @@ export default function TherapistDasboard() {
             <div className="card col-md-4 col-12 m-5 p-2" style={{width:'18rem'}} >
             <img src={patcover} class="card-img-top" alt="..."/>
            <div className="card-body">   
-                <a href="/therapist-detail" className="btn1">Patients</a>
+                <a href="/pdf-form" className="btn1">Patients</a>
             </div>
             </div>
             <div className="card col-md-4 col-12 m-5 p-2" style={{width:'18rem'}}  >
