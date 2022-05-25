@@ -44,19 +44,10 @@ const Login =({history}) =>{
 
     return (
         <>
-         <div className="container-fluid h1 p-5 text-center background-violet">
-         <h1 className='text-white text-sans'>Login</h1>
-        </div>
-        <div className='container'>
-            <div className='row'>
-                <div className='col-md-8 offset-md-3'>
                     <LoginForm 
                     handleSubmit={handleSubmit} email={email} setEmail={setEmail} password={password} setPassword={setPassword}
                     />
                
-                </div> 
-            </div>
-        </div>
         <Footer/>
         </>
     )
@@ -64,3 +55,26 @@ const Login =({history}) =>{
 }
 
 export default Login;
+
+
+
+
+// <div className="container-fluid h1 p-5 text-center background-violet">
+//          <h1 className='text-white text-sans'>Login</h1>
+//         </div>
+//         <div className='container'>
+//             <div className='row'>
+//                 {/* <div className='col-md-8 offset-md-3'>
+//                     <LoginForm 
+//                     handleSubmit={handleSubmit} email={email} setEmail={setEmail} password={password} setPassword={setPassword}
+//                     />
+               
+//                 </div>  */}
+//                 {/* <div className='col'> */}
+//                     <LoginForm 
+//                     handleSubmit={handleSubmit} email={email} setEmail={setEmail} password={password} setPassword={setPassword}
+//                     />
+               
+//                 {/* </div>  */}
+//             </div>
+//         </div>
