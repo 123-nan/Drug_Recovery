@@ -2,6 +2,7 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 import '../styles/Home.css'
 import axios from 'axios'
+import jsPDF from 'jspdf'
 
 const ReportForm = ({report,base64,tname,time}) => {
 
@@ -10,7 +11,25 @@ const ReportForm = ({report,base64,tname,time}) => {
 
   console.log(base64);
 
+
+
+
+  
+
+
   const downloadPdf = async () =>{
+<<<<<<< HEAD
+  
+
+  
+  const linkSource = base64;
+  const downloadLink = document.createElement("a");
+  const fileName = "vct_illustration.pdf";
+
+  downloadLink.href = linkSource;
+  downloadLink.download = fileName;
+  downloadLink.click();
+=======
     // var win = window.open(base64, '_blank');
     //  win.focus();
 
@@ -22,6 +41,7 @@ const ReportForm = ({report,base64,tname,time}) => {
     downloadlink.download=filename;
     downloadlink.click();
     
+>>>>>>> 879467c33af2f4842e5dcb882095bc2f5c0e1e89
  
     
 
