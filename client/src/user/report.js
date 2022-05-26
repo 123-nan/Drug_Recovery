@@ -35,6 +35,7 @@ const MedicalRecord = () =>{
         <>
         <div className="row p-5 m-l-5 text-center">
         {customList != null &&  customList.map((list) => <ReportForm report={list.reportname} base64={list.report} tname={list.tname} time={list.time}/>)}
+        
         </div>
         </>
 

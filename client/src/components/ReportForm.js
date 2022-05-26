@@ -18,6 +18,7 @@ const ReportForm = ({report,base64,tname,time}) => {
 
 
   const downloadPdf = async () =>{
+<<<<<<< HEAD
   
 
   
@@ -28,6 +29,19 @@ const ReportForm = ({report,base64,tname,time}) => {
   downloadLink.href = linkSource;
   downloadLink.download = fileName;
   downloadLink.click();
+=======
+    // var win = window.open(base64, '_blank');
+    //  win.focus();
+
+     
+    const link=base64;
+    const downloadlink=document.createElement("a");
+    const filename="report.pdf";
+    downloadlink.href=link;
+    downloadlink.download=filename;
+    downloadlink.click();
+    
+>>>>>>> 879467c33af2f4842e5dcb882095bc2f5c0e1e89
  
     
 
