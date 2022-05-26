@@ -45,16 +45,7 @@ const Joinroom= () => {
       </div>
      </div>
      </div>
-    { flag &&  <div className="col center join-room-margin">
-      <div className="card" style={{width: '18rem'}}>
-      <img className="card-img-top video-logo"  src="https://icon-library.com/images/status-report-icon/status-report-icon-1.jpg" alt="Card image cap" />
-      <div className="card-body">
-       <h5 className="card-title">Generate Report</h5>
-       <p className="card-text">Generate Report for Patients</p>
-       <button class="btn btn-primary text-sans" onClick={generateReport}>Generate Report</button>
-      </div>
-     </div>
-     </div>}
+    
 
      </div>
       </>

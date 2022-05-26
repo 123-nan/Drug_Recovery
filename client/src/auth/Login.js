@@ -2,6 +2,7 @@ import LoginForm from '../components/LoginForm';
 import { useState } from 'react';
 import { login } from '../actions/auth';
 import { toast } from 'react-toastify';
+import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import Footer from '../components/Footer';
 
@@ -35,6 +36,17 @@ const Login =({history}) =>{
 
             toast.success("Logged In");
             history.push("/");
+
+           
+
+
+
+
+
+
+
+
+
         }
         catch(err)
         {

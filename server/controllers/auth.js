@@ -76,15 +76,34 @@ export const therapist = async(req,res) =>{
 }
 
 export const scheduleTherapist = async(req,res) =>{
-  const {uid} = req.body;
-  const data = await ScheduleSchema.find({uid}).exec();
+
+ 
+  const data = await ScheduleSchema.find().exec();
   console.log(data);
   res.send(data);
 }
 
 
+export const insertscheduleTherapist = async(req,res) =>{
+  console.log(req.body)
+
+  const user = new ScheduleSchema(req.body);
+
+  try{
+    await user.save();
+    console.log("USER CREATED",user);
+    return res.json({ok:true});
+  }
+  catch(err){
+    console.log("Create USER FAILED",err);
+    return res.status(400).send("Error! Try Again");
+  }
+ 
+}
+
+
 export const editScheduleTherapist = async(req,res) =>{
-  console.log(req.headers);
+  console.log(req.body);
   const {uid,monday,tuesday,wednesday,thrusday,friday,saturday,sunday} = req.headers;
 
   const therap = await ScheduleSchema.findOne({uid}).exec();

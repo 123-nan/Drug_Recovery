@@ -44,7 +44,6 @@ function App() {
       <PrivateRouteForUser exact path="/therapist-detail/schedule" component={Schedule} />
       <PrivateRouteForUser exact path="/reports/:id" component={MedicalRecord} />
       <PrivateRouteForTherapist exact path="/therdashboard" component={TherapistDasboard} />
-      <PrivateRouteForTherapist exact path="/generate-report/:id" component={PdfGenerator} />
       <PrivateRouteForUser exact path="/therapist-detail" component={TherapistDetail} />
       <PrivateRouteForUser exact path="/therapist-detail/schedule/:id" component={Schedule} />
       <Route exact path="/about" component={About} />
@@ -52,8 +51,9 @@ function App() {
       <Route exact path="/therapist-appointment" component={AppointmentT} />
       <Route exact path="/testimonial" component={Testimonial} />
       <Route exact path="/contact" component={Contact} />
+      <Route exact path="/pdf-form" component={PdfForm} />
       <Route exact path="/blog" component={Blog} />
-      <PrivateRouteForTherapist exact path="/pdf-form/:id" component={PdfForm} />
+      <PrivateRouteForTherapist exact path="/pdf-form/:id" component={PdfGenerator} />
     </Switch>
     </>
   );
