@@ -1,16 +1,26 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import '../styles/Home.css'
+import axios from 'axios'
 
 const ReportForm = ({report,base64,tname,time}) => {
 
   const history = useHistory();
   const date = new Date(time).getDate() +":"+ new Date(time).getMonth() + ":"+ new Date(time).getFullYear();
 
+  console.log(base64);
 
-  const downloadPdf = () =>{
+  const downloadPdf = async () =>{
     var win = window.open(base64, '_blank');
-  win.focus();
+     win.focus();
+
+  
+
+ 
+    
+
+
+
   }
 
   return (

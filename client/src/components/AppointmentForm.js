@@ -47,6 +47,7 @@ const AppointmentForm = ({ puid, time, status,pname,tname}) => {
   const cancelorgen = (e) =>{
 
     
+    console.log(e.user);
     if(e.user.u == "therapist")
     return <button className='btn btn-danger  text-white border-round cardbtn m-1' onClick={generateReport}>Generate Report</button>
     return <button className='btn btn-danger  text-white border-round cardbtn m-1' >Cancel</button>
