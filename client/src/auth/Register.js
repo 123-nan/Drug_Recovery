@@ -39,14 +39,7 @@ const Register =({history}) =>{
    
     return (
         <>
-        <div className="container-fluid h1 p-5 text-center background-violet">
-           <h1 className='text-white text-sans'>Register</h1>
-        </div>
-
-       
-        <div className='container'>
-         <div className='row'>
-             <div className='col-md-8 offset-md-3'>
+        
                  <RegisterForm 
                   handleSubmit={handleSubmit}
                   name={name}
@@ -60,9 +53,6 @@ const Register =({history}) =>{
                   gender={gender}
                   setGender={setGender}
                  />
-             </div>
-         </div>
-        </div>
         <Footer/>
         </>
     )
