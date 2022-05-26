@@ -50,7 +50,7 @@ const AppointmentForm = ({ puid, time, status,pname,tname}) => {
     console.log(e.user);
     if(e.user.u == "therapist")
     return <button className='btn btn-danger  text-white border-round cardbtn m-1' onClick={generateReport}>Generate Report</button>
-    return <button className='btn btn-danger  text-white border-round cardbtn m-1' >Cancel</button>
+    return <button className='btn btn-danger  text-white border-round cardbtn m-1 disabled' >Closed</button>
 
   }
 
@@ -63,11 +63,11 @@ const AppointmentForm = ({ puid, time, status,pname,tname}) => {
             {time.substring(6,16)}
           </div>
           <div class="card-body">
-            <h5 class="card-title">Patient : {pname}</h5>
-            {user.u=="patient"?<h5 class="card-title">Therapist : {tname}</h5>:<></>}
+            {user.user.u=="therapist"?<h5 class="card-title">Patient : {pname}</h5>:<></>}
+            {user.user.u=="patient"?<h5 class="card-title">Therapist : {tname}</h5>:<></>}
             <h6 class="card-title">Time : {time.substring(0,5)}</h6>
             {!flag ?cancelorgen(user):<button className='btn btn-primary text-white border-round cardbtn' onClick={handleClick}>Open</button>}
-            {(user.u=="patient" && flag) && <button className='btn btn-danger  text-white border-round cardbtn m-1'>Cancel</button>}
+            {(user.user.u=="patient" && flag) && <button className='btn btn-danger  text-white border-round cardbtn m-1'>Cancel</button>}
           </div>
 
         </div>
