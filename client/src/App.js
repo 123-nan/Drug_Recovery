@@ -24,7 +24,6 @@ import ChatRoom from './therapist/chatroom';
 import Joinroom from './therapist/joinroom';
 import Testimonial from './components/Testimonial';
 import Contact from './routes/Contact';
-import Blog from './routes/Blogs';
 import PdfForm from './components/PdfForm';
 
 
@@ -52,7 +51,6 @@ function App() {
       <Route exact path="/testimonial" component={Testimonial} />
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/pdf-form" component={PdfForm} />
-      <Route exact path="/blog" component={Blog} />
       <PrivateRouteForTherapist exact path="/pdf-form/:id" component={PdfGenerator} />
     </Switch>
     </>

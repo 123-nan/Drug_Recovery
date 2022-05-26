@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 export default function About() {
   return (
     <>
-    <div className="about">
+    <div className="about pb-5">
     <h1 className="abouthead  mx-5 mb-5 pt-5">About Us</h1>
     <div className="about-section mx-5 px-5">
 
@@ -25,9 +25,9 @@ export default function About() {
 
     </div>
     <h2 className='aboutsechead mt-5'>Our Treatment Approach</h2>
-    <div className="row  mb-2">
-        <div className=" col-md-6 col-12  pb-5">
-            <div className="card cardabout p-5">
+    {/* <div className="gridalign mb-2"> */}
+        <div className=" gridalign  col-12 pb-5">
+            <div className=" cardabout p-5">
                 <h2>Highlights of our Treatment Approach</h2>
                 <ul>
                     <li>Preparation of individualized plans.</li>
@@ -37,8 +37,8 @@ export default function About() {
             </div>
         </div>
 
-        <div className=" col-md-6 col-12 pb-5">
-            <div className="card cardabout p-5">
+        <div className=" gridalign  col-12 pb-5 ">
+            <div className="cardabout p-5">
                 <h2>Our three simple principles</h2>
                 <br/>
                 <ul>
@@ -47,7 +47,7 @@ export default function About() {
                     <li>It should remain confidential.</li>
                 </ul>
 
-            </div>
+            {/* </div> */}
         </div>
 
     </div>
@@ -55,7 +55,7 @@ export default function About() {
     <h2 className='aboutsechead'>What Our User's Say</h2>
     <div className="row px-5">
         <div className="col-md-4 col-12 p-2">
-            <div className="card cardabout p-4">
+            <div className="cardabout p-4">
                 <h2>Monica Dixit - 28 years</h2>
                 <p>This website is an incredible source of knowledge and comfort for me. I'm going through one of the
                     hardest times of my life mentally, and you have made me feel less alone.</p>
@@ -64,7 +64,7 @@ export default function About() {
 
 
         <div className="col-md-4 col-12 p-2">
-            <div className="card cardabout p-4">
+            <div className=" cardabout p-4">
                 <h2>Shashank Pandey - 21 years</h2>
 
                 <p>Cure Street is a life-saving site and no doubt makes people's lives better through knowledge,
@@ -74,7 +74,7 @@ export default function About() {
 
 
         <div className="col-md-4 col-12 p-2">
-            <div className="card cardabout p-4">
+            <div className=" cardabout p-4">
 
                 <h2>Manoj Agrawal - 45 years</h2>
 
@@ -87,7 +87,7 @@ export default function About() {
     </div>
 
     <h2 className='aboutsechead pt-5 pb-3'>Our Ad-Free Policy</h2>
-        <p className="text px-5 mx-5 mb-5 p-5">
+        <p className="text about-section  px-5 mx-5  p-5">
             Cure Street does not accept advertising or sponsored content of any kind. Our website is 100% free of ads and corporate influence and always will be.
         You can trust our independence and intentions. We're not trying to sell you anything, collect your private information, or make money on you. Our only goal is to get you the assistance you need, when you need it.<br/>
        without any ulterior motives or annoying ads getting in the way of the help you're looking for.

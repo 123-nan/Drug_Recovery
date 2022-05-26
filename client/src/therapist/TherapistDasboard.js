@@ -13,19 +13,14 @@ export default function TherapistDasboard() {
         <h1 className="dash_head  mb-2 px-5 pt-5">Dashboard</h1>
             
         <div className="row py-2 rows gridalign">
-            <div className="card col-md-4 col-12 m-5 p-2" style={{width:'18rem'}} >
-            <img src={patcover} class="card-img-top" alt="..."/>
-           <div className="card-body">   
-                <a href="/pdf-form" className="btn1">Patients</a>
-            </div>
-            </div>
-            <div className="card col-md-4 col-12 m-5 p-2" style={{width:'18rem'}}  >
+            
+            <div className="card col-md-6 col-12 m-5 p-2" style={{width:'18rem'}}  >
             <img src={appcover} class="card-img-top" alt="..."/>
             <div className="card-body">
                 <Link to="/therapist-appointment" className="btn1">Appointments</Link>
             </div>
             </div>
-            <div className="card col-md-4 col-12 m-5 p-2" style={{width:'18rem'}} >
+            <div className="card col-md-6 col-12 m-5 p-2" style={{width:'18rem'}} >
             <img src={schcover} class="card-img-top" alt="..." sytle={{height:'10'}}/>
             <div className="card-body">
                 

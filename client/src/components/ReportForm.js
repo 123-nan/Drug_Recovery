@@ -11,11 +11,17 @@ const ReportForm = ({report,base64,tname,time}) => {
   console.log(base64);
 
   const downloadPdf = async () =>{
-    var win = window.open(base64, '_blank');
-     win.focus();
+    // var win = window.open(base64, '_blank');
+    //  win.focus();
 
-  
-
+     
+    const link=base64;
+    const downloadlink=document.createElement("a");
+    const filename="report.pdf";
+    downloadlink.href=link;
+    downloadlink.download=filename;
+    downloadlink.click();
+    
  
     
 

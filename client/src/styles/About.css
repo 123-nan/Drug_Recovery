@@ -17,6 +17,10 @@
 .about{
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
+    background-image: url(https://www.adl-usa.com/wp-content/uploads/2015/12/Testimonials-background.png);
+    background-repeat: no-repeat;
+    background-position: auto;
+    background-size: cover;
 }
 
 
@@ -28,16 +32,23 @@
 }
 
 .cardabout {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 50px;
-    background-color:lightblue;
+    background-color: lightgoldenrodyellow;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
+    margin-top: 50px;
 }
 
 .about-section {
-    padding: 50px;
-    text-align: center;
-    background-color: lightblue;
-    color: black;
+    background-color: lightgoldenrodyellow;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
+    margin-top: 50px;
 }
 
 .container {
@@ -65,7 +76,7 @@
 
 .text {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: lightblue;
+    /* background-color: lightblue; */
 }
 
 h2 {

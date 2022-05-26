@@ -17,9 +17,6 @@ export default function Footer() {
                 <a class="nav-link footeritem" href="/testimonial">TESTIMONIAL</a>
             </li>
             <li class="footeritem">
-                <a class="nav-link footeritem" href="/blog">BLOG</a>
-            </li>
-            <li class="footeritem">
                 <a class="nav-link footeritem" href="/contact">CONTACT US</a>
             </li>
         </ul>
