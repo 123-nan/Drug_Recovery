@@ -57,7 +57,7 @@ export default function Home() {
             <div className="row cure p-5">
                 <div className="col-md-8 p-5">
                     <h2 className="homehead pb-4">GET RID OF YOUR ADDICTION AT CURE STREET</h2>
-                    <p>Cure Street provides unique recovery experience for individuals struggling with alcohol and drug use problems ans
+                    <p>Cure Street provides unique recovery experience for individuals struggling with alcohol and drug use problems and
                     provides valuable assistance and information for managing your health,and support to those who seek
                     information.People generally hesitate in talking about addictions because it is still a taboo in many
                     countries,so with Cure Street people can talk about their condition freely without being judged at any time.</p>

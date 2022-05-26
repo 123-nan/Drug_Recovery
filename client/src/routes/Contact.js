@@ -10,10 +10,10 @@ export default function Contact() {
     <div className="row contact-section">
         <div className=" col-md-6 col-12 contact-info">
         <h1 className='contacthead mb-3'>CONTACT US</h1>
-            <div> <i className="fa-solid fa-location-dot"></i>Address , City , Country</div>
-            <div> <i className="fa-solid fa-envelope"></i>contact@email.com</div>
-            <div> <i className="fa-solid fa-phone"></i>+91-9732157821</div>
-            <div> <i className="fa-solid fa-clock"></i>Mon-Fri 8:00 AM to 5:00PM</div>
+            <div> <i className="fa-solid fa-location-dot"></i> Teliarganj, Prayagraj, Uttar Pradesh</div>
+            <div> <i className="fa-solid fa-envelope"></i> curestreet@gmail.com</div>
+            <div> <i className="fa-solid fa-phone"></i> +91-9732157821</div>
+            <div> <i className="fa-solid fa-clock"></i> Mon - Sat 10:00 AM to 8:00PM</div>
         </div>
 
         <div className=" col-md-6 col-12 contact-form mt-5 mx-4 p-4">
