@@ -40,20 +40,33 @@ const AppointmentForm = ({ puid, time, status,pname,tname}) => {
     history.push(`/joinroom/${puid}`);
   }
 
+  const generateReport = () =>{
+    history.push(`/pdf-form/${puid}`);
+  }
+
+  const cancelorgen = (e) =>{
+
+    
+    if(e.user.u == "therapist")
+    return <button className='btn btn-danger  text-white border-round cardbtn m-1' onClick={generateReport}>Generate Report</button>
+    return <button className='btn btn-danger  text-white border-round cardbtn m-1' >Cancel</button>
+
+  }
+
   return (
     <>
 
       <div className="component text-center col-md-3 m-5 gridalign">
         <div className="card" style={{width:"18rem"}}>
-          <div class="card-header background-violet text-white">
+          <div class="card-header background-v text-white">
             {time.substring(6,16)}
           </div>
           <div class="card-body">
             <h5 class="card-title">Patient : {pname}</h5>
             {user.u=="patient"?<h5 class="card-title">Therapist : {tname}</h5>:<></>}
             <h6 class="card-title">Time : {time.substring(0,5)}</h6>
-            {!flag ?<button className='btn btn-danger background-violet text-white border-round cardbtn m-1' disabled>Closed</button>:<button className='btn btn-primary background-violet text-white border-round cardbtn' onClick={handleClick}>Open</button>}
-            {flag && <button className='btn background-red text-white border-round cardbtn m-1 btn2'>Cancel</button>}
+            {!flag ?cancelorgen(user):<button className='btn btn-primary text-white border-round cardbtn' onClick={handleClick}>Open</button>}
+            {(user.u=="patient" && flag) && <button className='btn btn-danger  text-white border-round cardbtn m-1'>Cancel</button>}
           </div>
 
         </div>

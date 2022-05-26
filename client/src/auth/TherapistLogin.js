@@ -9,6 +9,8 @@ const TherapistLogin =({history}) =>{
 
     const dispatch = useDispatch();
 
+    const user = "therapist";
+
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
  
@@ -44,7 +46,7 @@ const TherapistLogin =({history}) =>{
     return (
         <>
                     <LoginForm 
-                    handleSubmit={handleSubmit} email={email} setEmail={setEmail} password={password} setPassword={setPassword}
+                    handleSubmit={handleSubmit} email={email} user={user} setEmail={setEmail} password={password} setPassword={setPassword}
                     />
                
         <Footer/>

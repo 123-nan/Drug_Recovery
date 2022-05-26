@@ -1,11 +1,13 @@
 import '../styles/Login.css'
 
 
-const LoginForm= ({handleSubmit,email,setEmail,password,setPassword}) => (
+const LoginForm= ({handleSubmit,email,setEmail,password,setPassword,user}) => (
+
+
 <>
 <div className="loginform">
    <form onSubmit={handleSubmit} className="login-form">
-       <h3>Login Here</h3>
+       <h3>{user=="patient"?"Login Here":"Therapist Login"}</h3>
        <label for="email">Email</label>
        <input type="text" placeholder="Enter Email" id="email"
        value={email}

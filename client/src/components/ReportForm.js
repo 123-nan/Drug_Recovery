@@ -18,7 +18,7 @@ const ReportForm = ({report,base64,tname,time}) => {
 
       <div className="component text-center col-md-3 m-5">
         <div className="card">
-          <div class="card-header background-violet text-white">
+          <div class="card-header background-v text-white">
             {report}
           </div>
           <div class="card-body">

@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 const Login =({history}) =>{
 
     const dispatch = useDispatch();
+    const user = "patient";
 
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
@@ -45,7 +46,7 @@ const Login =({history}) =>{
     return (
         <>
                     <LoginForm 
-                    handleSubmit={handleSubmit} email={email} setEmail={setEmail} password={password} setPassword={setPassword}
+                    handleSubmit={handleSubmit} email={email} setEmail={setEmail} user={user} password={password} setPassword={setPassword}
                     />
                
         <Footer/>

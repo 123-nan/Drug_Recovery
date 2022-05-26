@@ -7,7 +7,7 @@
 }
 
 .dashboard{
-    background-color: #110643;
+    
     /* height: 590px; */
     background-size: cover;
     background-position: center;
@@ -42,4 +42,8 @@
 }
 .cursor{
     cursor: pointer;
+    
+}
+.cursor:hover{
+    background-color: cadetblue;
 }

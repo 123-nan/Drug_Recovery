@@ -21,7 +21,7 @@ code {
 }
 
 .background-violet{
-  background-color: #110643;
+  background-color: #cfddea
 }
 
 .violet{
@@ -69,11 +69,12 @@ code {
   margin-top: 100px;
 }
 
-.joinroom_uppercard_margin{
-  margin: 100px;
+.background-v{
+  background-color: #110643;
 }
 .input_margin{
   margin: 30px;
+  color: black;
 }
 .input_margin_joinroom{
   margin-left: 10px;

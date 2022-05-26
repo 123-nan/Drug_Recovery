@@ -53,7 +53,7 @@ function App() {
       <Route exact path="/testimonial" component={Testimonial} />
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/blog" component={Blog} />
-      <Route exact path="/pdf-form" component={PdfForm} />
+      <PrivateRouteForTherapist exact path="/pdf-form/:id" component={PdfForm} />
     </Switch>
     </>
   );

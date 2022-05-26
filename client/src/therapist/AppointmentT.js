@@ -12,7 +12,7 @@ export default function AppointmentT() {
 
   const uuid = user.user._id;
 
-  console.log(uuid);
+  console.log(uuid)
 
   const [list,setList] = useState([]);
 
