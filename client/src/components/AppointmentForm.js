@@ -2,9 +2,11 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 import '../styles/Home.css'
 import '../styles/Footer.css'
+import axios from 'axios'
 import { useSelector } from 'react-redux'
+import { toast } from 'react-toastify'
 
-const AppointmentForm = ({ puid, time, status,pname,tname}) => {
+const AppointmentForm = ({ puid, time, status,pname,tname,obid}) => {
 
   const history = useHistory();
   const user = useSelector((state) => ({...state}));
@@ -33,7 +35,12 @@ const AppointmentForm = ({ puid, time, status,pname,tname}) => {
   {flag = false; console.log(currentMinute,minute);}
   else
   flag = true;
-  console.log(currentDay,currentMonth,currentYear,currentHour,currentMinute);
+ 
+
+  if(status == true)
+  console.log(obid)
+
+
 
 
   const handleClick = () =>{
@@ -43,6 +50,28 @@ const AppointmentForm = ({ puid, time, status,pname,tname}) => {
   const generateReport = () =>{
     history.push(`/pdf-form/${puid}`);
   }
+
+  const cancelApp = () =>{
+    
+
+
+    axios.post('http://localhost:8003/api/cancel-appointment', {
+            _id:obid
+          })
+          .then(function (response) {
+            console.log(response.data);
+            toast.success("Appointment Cancelled");
+            window.location.reload();
+            
+          })
+          .catch(function (error) {
+            console.log(error);
+            toast.dark("Cancellation Failed");
+          });
+       }
+
+  
+  
 
   const cancelorgen = (e) =>{
 
@@ -66,8 +95,8 @@ const AppointmentForm = ({ puid, time, status,pname,tname}) => {
             {user.user.u=="therapist"?<h5 class="card-title">Patient : {pname}</h5>:<></>}
             {user.user.u=="patient"?<h5 class="card-title">Therapist : {tname}</h5>:<></>}
             <h6 class="card-title">Time : {time.substring(0,5)}</h6>
-            {!flag ?cancelorgen(user):<button className='btn btn-primary text-white border-round cardbtn' onClick={handleClick}>Open</button>}
-            {(user.user.u=="patient" && flag) && <button className='btn btn-danger  text-white border-round cardbtn m-1'>Cancel</button>}
+            {!flag ?cancelorgen(user): status == true ?<button className='btn btn-primary text-white border-round cardbtn'>Cancelled</button>:<button className='btn btn-primary text-white border-round cardbtn' onClick={handleClick}>Open</button>}
+            {(user.user.u=="patient" && flag && status == false)  && <button className='btn btn-danger  text-white border-round cardbtn m-1' onClick={cancelApp}>Cancel</button>}
           </div>
 
         </div>

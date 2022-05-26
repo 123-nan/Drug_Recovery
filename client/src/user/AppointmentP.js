@@ -19,7 +19,7 @@ export default function AppointmentP() {
         puid
       })
       .then(function (response) {
-      
+        console.log(response)
         setList(response.data);
       })
       .catch(function (error) {
@@ -36,7 +36,7 @@ export default function AppointmentP() {
     <>
     <h1 className="tophead mt-5 " >Appointments</h1>
      <div className="row px-5 pb-5 m-l-5 gridalign">
-    {list.map((l) => <AppointmentForm time={l.time} puid={l.puid} status={l.status} pname={l.pname} tname={l.tname}/>)}
+    {list.map((l) => <AppointmentForm time={l.time} puid={l.puid} status={l.status} pname={l.pname} tname={l.tname} obid={l._id}/>)}
     </div>
     <Footer/>
     </>

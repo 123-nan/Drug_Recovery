@@ -104,7 +104,7 @@ export const insertscheduleTherapist = async(req,res) =>{
 
 export const editScheduleTherapist = async(req,res) =>{
   console.log(req.body);
-  const {uid,monday,tuesday,wednesday,thrusday,friday,saturday,sunday} = req.headers;
+  const {uid,monday,tuesday,wednesday,thrusday,friday,saturday,sunday} = req.body;
 
   const therap = await ScheduleSchema.findOne({uid}).exec();
 
@@ -236,6 +236,23 @@ export const appointmentcheduleforpatient = async(req,res) =>{
     res.status(400).send({ok:false});
   }
 }
+
+
+export const appointmentcancel = async(req,res) =>{
+  console.log(req.body);
+  const {_id} = req.body;
+        const data = await  BookingSchedule.findOneAndUpdate({_id},{status:true}).exec();
+  try{
+    console.log(data);
+    res.json(data);
+  }
+  catch(err)
+  {
+    console.log(err);
+    res.status(400).send({ok:false});
+  }
+}
+
 
 export const appointmentchedulefortherapist = async(req,res) =>{
   console.log(req.body);
