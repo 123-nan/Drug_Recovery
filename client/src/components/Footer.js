@@ -21,6 +21,7 @@ export default function Footer() {
                     <div class="col-sm-6 col-md-3 item">
                         <h3>Quick Links</h3>
                         <ul>
+                            <li ><a href="/">Home </a></li>
                             <li ><a href="/about">About </a></li>
                             <li ><a href="/testimonial">Testimonial</a></li>
                             <li ><a href="/contact">Contact</a></li>

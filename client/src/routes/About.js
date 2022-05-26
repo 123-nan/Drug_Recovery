@@ -25,7 +25,7 @@ export default function About() {
 
     </div>
     <h2 className='aboutsechead mt-5'>Our Treatment Approach</h2>
-    {/* <div className="gridalign mb-2"> */}
+    
         <div className=" gridalign  col-12 pb-5">
             <div className=" cardabout p-5">
                 <h2>Highlights of our Treatment Approach</h2>
@@ -47,7 +47,6 @@ export default function About() {
                     <li>It should remain confidential.</li>
                 </ul>
 
-            {/* </div> */}
         </div>
 
     </div>

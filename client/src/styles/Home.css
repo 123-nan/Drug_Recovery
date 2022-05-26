@@ -62,3 +62,53 @@
   .privacy{
     text-align: center;
   }
+
+  .homeback{
+    background-image: url("../components/images/blueback.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+  }
+
+  .homehead{
+    font-weight: bolder;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 0 0 3px #ffffff;
+}
+  
+
+  .homelist{
+    font-weight: bold;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:x-large;
+  }
+
+  .expert{
+    background-color: #ffffff;
+    display: flex;
+      justify-content: center;
+  }
+
+  .expertlist{
+    font-weight: bold;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:large;
+  }
+
+  /* .facility{
+    background-image: url("../components/images/peace.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+  } */
+
+  .cure{
+    background-color: #ffffff;
+  }
+
+  
