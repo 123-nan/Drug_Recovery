@@ -18,10 +18,11 @@ const Joinroom= () => {
     const handleClick = (e) =>{
          history.push(`/chat-room/${params.id}`);
     }
+    
+    const handleVideo = (e) => {
+          history.push(`/video-room/${params.id}`);
+    }
 
-    const generateReport = (e) =>{
-      history.push(`/generate-report/${params.id}`);
- }
     return (
       <>
       <div className="row" style={{marginTop:'100px'}}>
@@ -40,8 +41,8 @@ const Joinroom= () => {
       <img className="card-img-top video-logo"  src="https://www.oasisalignment.com/wp-content/uploads/2018/07/video-icon.png" alt="Card image cap" />
       <div className="card-body">
        <h5 className="card-title">Join Video</h5>
-       <p className="card-text">Get Detailed Advice on Vide Call</p>
-       <button class="btn btn-primary text-sans" onClick={handleClick}>Join Video</button>
+       <p className="card-text">Get Detailed Advice on Video Call</p>
+       <button class="btn btn-primary text-sans" onClick={handleVideo}>Join Video</button>
       </div>
      </div>
      </div>

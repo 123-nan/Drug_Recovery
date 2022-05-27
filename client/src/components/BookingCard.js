@@ -7,7 +7,7 @@ import '../styles/Footer.css'
 const BookingCard =({day,list,uuid,tname}) =>{
        
 
-    console.log(day,list);
+  
 
     const {user} = useSelector((state) =>({...state}));
     
@@ -29,11 +29,22 @@ const BookingCard =({day,list,uuid,tname}) =>{
       }
       const detail = e.target.innerText;
 
-      const currentTime = new Date(Date.now()).getHours() + ":"+ new Date(Date.now()).getMinutes();
+      var hour = new Date(Date.now()).getHours();
 
-      if(currentTime == detail)
-      console.log("Time match");
-      else if(currentTime > detail)
+      if(hour <= 9)
+      hour = "0" + hour;
+
+      var min = new Date(Date.now()).getMinutes();
+
+      if(min <= 1)
+      min = "0" + min;
+
+      const currentTime =  hour+ ":"+ min;
+
+      console.log(currentTime);
+
+   
+      if(currentTime > detail)
       { toast.dark(`Booking Allowed after ${currentTime}`);   return;}
       
 
@@ -43,7 +54,7 @@ const BookingCard =({day,list,uuid,tname}) =>{
       
       const time=detail.substring(0,5)+":"+new Date().getDate() + ":" + month+":"+new Date().getFullYear();
       const status = false;
-      console.log(time);
+    
       try{
       const data = await bookingSchedule({time,status,uuid,puid,pname,tname});
       toast.success("Booked");

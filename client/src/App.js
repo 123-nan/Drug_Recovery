@@ -21,11 +21,15 @@ import MedicalRecord from './user/report';
 import AppointmentP from './user/AppointmentP';
 import AppointmentT from './therapist/AppointmentT';
 import ChatRoom from './therapist/chatroom';
+
 import Joinroom from './therapist/joinroom';
 import Testimonial from './components/Testimonial';
 import Contact from './routes/Contact';
 import PdfForm from './components/PdfForm';
-
+import Video from './videocall/video';
+import VideoRoom from './videocall/videoroom';
+import VideoChatRoom from './videocall/video-chat';
+import EditSchedule from './therapist/EditSchedule';
 
 function App() {
   return (
@@ -51,6 +55,11 @@ function App() {
       <Route exact path="/testimonial" component={Testimonial} />
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/pdf-form" component={PdfForm} />
+      <Route exact path="/video-room/:id" component={VideoRoom} />
+      <Route exact path="/video-chat/" component={VideoChatRoom} />
+      
+      <Route exact path="/video-call/:id" component={Video} />
+      <PrivateRouteForTherapist exact path="/edit-schedule/:id" component={EditSchedule} /> 
       <PrivateRouteForTherapist exact path="/pdf-form/:id" component={PdfGenerator} />
     </Switch>
     </>

@@ -28,6 +28,17 @@ const ChatRoom = () => {
         }
     }
 
+
+    const  validURL =(str) => {
+        var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+          '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+          '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+          '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+          '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+          '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+        return !!pattern.test(str);
+      }
+
     const sendMessage = async () => {
         if (message !== "") {
             console.log(username);
@@ -52,6 +63,11 @@ const ChatRoom = () => {
             console.log(messageList);
         }
 
+
+        socket.on("connected",(data) =>{
+            console.log(data);
+        })
+
         double = double ? false : true;
     }, [socket]);
 
@@ -63,14 +79,24 @@ const ChatRoom = () => {
         }
     }
 
+
+  
+
+
+   
     const onleft = (message, time, author) => {
+
+
+       
+
+
 
         if (author == username)
             return (
                 <div className="d-flex justify-content-end mb-4">
-
+                    
                     <div className="msg_cotainer_send">
-                        {message}
+                        { validURL(message)? <a href={message} target="_blank" >{message}</a>  : message}
                         <span class="msg_time_send">{time}</span>
 
                     </div>
@@ -83,7 +109,7 @@ const ChatRoom = () => {
                 <div className="d-flex justify-content-start mb-4">
 
                     <div className="msg_cotainer_send">
-                        {message}
+                    { validURL(message)? <a href={message} target="_blank">{message}</a>  : message}
                         <span class="msg_time_send">{time}</span>
 
                     </div>

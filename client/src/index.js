@@ -8,7 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 import {Provider} from 'react-redux'
 import {composeWithDevTools} from 'redux-devtools-extension'
 import rootReducer from './reducers';
-
+import { ContextProvider } from './videocall/socket';
 
 
 
@@ -18,10 +18,13 @@ const store = createStore(rootReducer,composeWithDevTools());
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
+  
   <BrowserRouter>
   <React.StrictMode>
     <Provider store={store}>
+     
     <App />
+    
     </Provider>
   </React.StrictMode>
   </BrowserRouter>

@@ -1,64 +1,138 @@
-.row{
-	display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    --bs-gutter-x:0;
- }
+.row {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  --bs-gutter-x: 0;
+}
 
 
+video {
+  border: 2px solid black;
+}
 
- .row::after {
+
+.row::after {
   display: block;
   clear: both;
   content: "";
-  
+
 }
 
-    
+
 * {
   box-sizing: border-box;
 }
-.col-1 {width: 8.33%};
-.col-2 {width: 16.66%; }
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-121 {width: 100%;}
 
- .row-card{
-   margin-top: 100px;
- }
+.col-1 {
+  width: 8.33%
+}
+
+;
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-121 {
+  width: 100%;
+}
+
+.row-card {
+  margin-top: 100px;
+}
 
 
-  @media only screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
 
-    .col-5{
-      width: 100%;
-    }
-    .col-7{
-      width: 100%;
-    }
-    .row-card{
-      margin-top: 0px;
-    }
-    
+  .col-5 {
+    width: 100%;
   }
 
-  @media only screen and (max-width: 690px) {
-
-   
-    .row-card{
-      margin-top: 0px;
-    }
-    
+  .col-7 {
+    width: 100%;
   }
 
-  .privacy{
-    text-align: center;
+  .row-card {
+    margin-top: 0px;
   }
+
+}
+
+@media only screen and (max-width: 690px) {
+
+
+  .row-card {
+    margin-top: 0px;
+  }
+
+}
+
+.privacy {
+  text-align: center;
+}
+
+
+.video-large-div {
+  display: flex;
+  justify-content: center;
+}
+
+.video-div {
+  height: 300px;
+  width: 398px;
+  margin: 10px;
+}
+
+.input-video {
+  display: block;
+
+
+  background-color: rgba(255, 255, 255, 0.07);
+
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300
+}
+
+.input-button{
+  margin: 10px;
+  border-radius: 20px;
+  border: 2px solid rgb(0, 0, 0);
+}

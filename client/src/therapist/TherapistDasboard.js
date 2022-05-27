@@ -5,8 +5,21 @@ import '../styles/Footer.css'
 import patcover from "../user/images/patientcov.jpg"
 import appcover from "../user/images/app_cover.jpg"
 import schcover from "../user/images/schedule_cover.jpg"
+import { useSelector } from 'react-redux'
+import { useHistory } from 'react-router-dom'
 
-export default function TherapistDasboard() {
+const  TherapistDasboard = () => {
+
+    const {user} = useSelector((state) => ({...state}));
+    const id = user.user._id;
+    const history = useHistory();
+
+    const handleSchedule = ()=>{
+
+        history.push(`/edit-schedule/${id}`);
+
+    }
+
   return (
     <>
     <div className="dashboard">
@@ -24,7 +37,7 @@ export default function TherapistDasboard() {
             <img src={schcover} class="card-img-top" alt="..." sytle={{height:'10'}}/>
             <div className="card-body">
                 
-                <a href="/" className="btn1">Schedule</a>
+                <button className="btn1" onClick={handleSchedule} >Schedule</button>
             </div>
             </div>
         </div>
@@ -34,3 +47,5 @@ export default function TherapistDasboard() {
   )
 }
 
+
+export default TherapistDasboard

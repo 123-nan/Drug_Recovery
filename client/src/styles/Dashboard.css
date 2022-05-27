@@ -46,3 +46,7 @@
 .cursor:hover{
     background-color: cadetblue;
 }
+
+.list-delete:hover{
+    background-color: red;
+}

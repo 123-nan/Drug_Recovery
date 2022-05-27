@@ -16,7 +16,7 @@ router.get("/therapist",therapist)
 
 router.post("/schedule-therapist",scheduleTherapist)
 
-
+router.post("/addordelete-schedule-therapist",editScheduleTherapist)
 
 router.post("/update-schedule-therapist",insertscheduleTherapist)
 

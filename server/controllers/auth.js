@@ -77,8 +77,8 @@ export const therapist = async(req,res) =>{
 
 export const scheduleTherapist = async(req,res) =>{
 
- 
-  const data = await ScheduleSchema.find().exec();
+
+  const data = await ScheduleSchema.find(req.body).exec();
   console.log(data);
   res.send(data);
 }
@@ -103,33 +103,29 @@ export const insertscheduleTherapist = async(req,res) =>{
 
 
 export const editScheduleTherapist = async(req,res) =>{
-  console.log(req.body);
-  const {uid,monday,tuesday,wednesday,thrusday,friday,saturday,sunday} = req.body;
+ 
+  const {uid,monday,val} = req.body;
 
-  const therap = await ScheduleSchema.findOne({uid}).exec();
 
-  if(!therap)
-  {
-     const therap = new ScheduleSchema({uid,monday,tuesday,wednesday,thrusday,friday,saturday,sunday});
-     try{
-       await therap.save();
-       res.json({ok:true});
-     }
-     catch(err)
-     {
-       res.json(err);
-     }
-  }
-  else{
+
+    const daylist = ["monday","tuesday","wednesday","thrusday","friday","saturday","sunday"];
+
+
+
   try{
-    const schedule = await ScheduleSchema.findOneAndUpdate({uid},{monday,tuesday,wednesday,thrusday,friday,saturday,sunday}).exec();
+
+     var schedule;
+
+      
+      schedule = await ScheduleSchema.findOneAndUpdate({uid},{$pull: {monday : {$elemMatch:{val}}}}).exec();
+     console.log(schedule);
     return res.json({ok:true});
   }
   catch(err){
     console.log("Failed",err);
     return res.status(400).send("Error! Try Again");
   }
-}
+
 }
 
 
