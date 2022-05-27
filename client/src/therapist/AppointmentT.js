@@ -22,6 +22,10 @@ export default function AppointmentT() {
       })
       .then(function (response) {
       
+        response.data.sort(function(a, b) {
+          return parseFloat(a.price) - parseFloat(b.price);
+      });
+
         setList(response.data);
       })
       .catch(function (error) {

@@ -3,12 +3,12 @@ import { SocketContext } from "./socket";
 
 const Notification = () => {
 
-    const { answerCall, call, callAccepted } = useContext(SocketContext);
+    const { answerCall, call, callAccepted,me } = useContext(SocketContext);
 
     console.log(call);
     return (
         <>
-            {call.isReceivedCall && !callAccepted && (
+          
 
                 <div>
 
@@ -21,10 +21,10 @@ const Notification = () => {
                     </button>
 
                 </div>
-            )
+            
 
 
-            }
+            
         </>
     )
 
