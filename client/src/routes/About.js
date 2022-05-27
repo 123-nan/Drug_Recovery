@@ -16,7 +16,7 @@ export default function About() {
             With the help of Cure Street,users can instantly consult doctors online all through the tap or click of a
             button.
         </p>
-        <p className="text">Cure Street provides unique recovery experience for individuals struggling with alcohol and drug use problems ans
+        <p className="text">Cure Street provides unique recovery experience for individuals struggling with alcohol and drug use problems and
             provides valuable assistance and information for managing your health,and support to those who seek
             information.People generally hesitate in talking about addictions because it is still a taboo in many
             countries,so with Cure Street people can talk about their condition freely without being judged at any time.
@@ -25,7 +25,7 @@ export default function About() {
 
     </div>
     <h2 className='aboutsechead mt-5'>Our Treatment Approach</h2>
-    {/* <div className="gridalign mb-2"> */}
+    
         <div className=" gridalign  col-12 pb-5">
             <div className=" cardabout p-5">
                 <h2>Highlights of our Treatment Approach</h2>
@@ -47,7 +47,6 @@ export default function About() {
                     <li>It should remain confidential.</li>
                 </ul>
 
-            {/* </div> */}
         </div>
 
     </div>

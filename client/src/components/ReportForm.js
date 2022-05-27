@@ -18,7 +18,7 @@ const ReportForm = ({report,base64,tname,time}) => {
 
 
   const downloadPdf = async () =>{
-   // var win = window.open(base64, '_blank');
+    // var win = window.open(base64, '_blank');
     //  win.focus();
 
      

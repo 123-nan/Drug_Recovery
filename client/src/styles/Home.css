@@ -101,6 +101,7 @@ video {
     margin-top: 0px;
   }
 
+<<<<<<< HEAD
 }
 
 .privacy {
@@ -136,3 +137,58 @@ video {
   border-radius: 20px;
   border: 2px solid rgb(0, 0, 0);
 }
+=======
+  .privacy{
+    text-align: center;
+  }
+
+  .homeback{
+    background-image: url("../components/images/blueback.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+  }
+
+  .homehead{
+    font-weight: bolder;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 0 0 3px #ffffff;
+}
+  
+
+  .homelist{
+    font-weight: bold;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:x-large;
+  }
+
+  .expert{
+    background-color: #ffffff;
+    display: flex;
+      justify-content: center;
+  }
+
+  .expertlist{
+    font-weight: bold;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:large;
+  }
+
+  /* .facility{
+    background-image: url("../components/images/peace.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+  } */
+
+  .cure{
+    background-color: #ffffff;
+  }
+
+  
+>>>>>>> a77c4da0caab115a9d6d0c02b94b8db91094b106
