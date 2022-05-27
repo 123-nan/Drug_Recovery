@@ -67,7 +67,7 @@ export default function Home() {
                     
                     <p>
                     With the help of Cure Street,users can instantly consult doctors online all through the tap or click of a
-                    button and can freely chat or have a face time with their therapist.
+                    button and can freely chat with their therapist.
                     </p>
                 </div>
                 <div className="col-md-4 col-12 p-5 ">

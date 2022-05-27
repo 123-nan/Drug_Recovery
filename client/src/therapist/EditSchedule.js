@@ -58,7 +58,7 @@ const EditSchedule = () => {
 
     return (
         <>
-        <h1 className="tophead mt-5">Book Your Slot</h1>
+        <h1 className="tophead mt-5">My Schedule</h1>
         <div className="row p-5 m-l-5 text-center">
         {customList != null &&  customList.map((list) => <EditScheduleCard uuid={uid} day={list.day} list={list.date} tname={therapist} compl={customList}/>)}
         </div>
