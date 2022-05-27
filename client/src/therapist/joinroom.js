@@ -36,7 +36,7 @@ const Joinroom= () => {
       </div>
      </div>
      </div>
-     <div className="col center join-room-margin">
+     {/* <div className="col center join-room-margin">
       <div className="card" style={{width: '18rem'}}>
       <img className="card-img-top video-logo"  src="https://www.oasisalignment.com/wp-content/uploads/2018/07/video-icon.png" alt="Card image cap" />
       <div className="card-body">
@@ -46,7 +46,7 @@ const Joinroom= () => {
       </div>
      </div>
      </div>
-    
+     */}
 
      </div>
       </>

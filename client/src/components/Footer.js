@@ -14,7 +14,7 @@ export default function Footer() {
                         <ul>
                             <li>Therapist Appointment</li>
                             <li>Chat </li>
-                            <li>Video Call</li>
+                            {/* <li>Video Call</li> */}
                             <li>Generate Report</li>
                         </ul>
                     </div>
