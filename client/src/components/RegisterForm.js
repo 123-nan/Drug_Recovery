@@ -5,7 +5,7 @@ const RegisterForm = ({handleSubmit,name,setName,email,setEmail,password,setPass
 <>
 
 <div className="registerform">
-   <form onSubmit={handleSubmit} className="register-form">
+   <div onSubmit={handleSubmit} className="register-form">
        <h3>Register</h3>
 
        <label for='name'>Your name</label>
@@ -49,8 +49,7 @@ const RegisterForm = ({handleSubmit,name,setName,email,setEmail,password,setPass
         </div>
 
        <button disabled={!email || !password ||!name || !age ||!gender} className="registerbutton">Register</button>
-
-   </form>
+   </div>
 </div>
 
 </>

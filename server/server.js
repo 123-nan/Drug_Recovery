@@ -3,6 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import { readdirSync } from 'fs'; // from nodejs or destruct readdirSync
+import { timeLog } from 'console';
 
 require("dotenv").config();
 const morgan = require("morgan");
@@ -35,12 +36,12 @@ const io = new Server(server, {
 });
 
 io.on("connection", (socket) => {
-    console.log(socket.id);
+    
 
     socket.on("join_room", (data) => {
         socket.join(data)
         console.log("USER WITH ID", data);
-        socket.to(data).emit("connected",data);
+        socket.to(data).emit("connected", data);
     })
     socket.on("send_message", (data) => {
         console.log(data);
@@ -50,6 +51,19 @@ io.on("connection", (socket) => {
     socket.on("disconnect", () => {
         console.log("User Disconnected");
     })
+
+    socket.on("userconnect", (data) => {
+        console.log("userconnect", data.displayName, data.meeting_id);
+
+        socket.join(data.meeting_id)
+        console.log("USER WITH NAME", data.displayName);
+        socket.to(data.meeting_id).emit("inform", data);
+    })
+
+
+
+
+    
 })
 
 

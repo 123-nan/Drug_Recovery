@@ -3,7 +3,7 @@ import Therapist from '../models/therapist';
 import jsonwebtoken, { JsonWebTokenError } from 'jsonwebtoken';
 import ScheduleSchema from '../models/schedule';
 import BookingSchedule from '../models/bookingSchedule';
-import Report from '../models/report';
+
 
 
 export const register = async (req,res) =>{
@@ -78,6 +78,8 @@ export const therapist = async(req,res) =>{
 export const scheduleTherapist = async(req,res) =>{
 
 
+  
+
   const data = await ScheduleSchema.find(req.body).exec();
   console.log(data);
   res.send(data);
@@ -85,17 +87,17 @@ export const scheduleTherapist = async(req,res) =>{
 
 
 export const insertscheduleTherapist = async(req,res) =>{
-  console.log(req.body)
+  console.log(req.body.d)
 
-  const user = new ScheduleSchema(req.body);
+  const schedule = new ScheduleSchema(req.body.d);
 
   try{
-    await user.save();
-    console.log("USER CREATED",user);
+    await schedule.save();
+    console.log("Schedule CREATED",req.body.name);
     return res.json({ok:true});
   }
   catch(err){
-    console.log("Create USER FAILED",err);
+    console.log(" FAILED",err);
     return res.status(400).send("Error! Try Again");
   }
  
@@ -201,8 +203,38 @@ catch(err){
 
 
 export const bookingschedule = async(req,res) =>{
-    console.log(req.body);
-    const {time,uuid,puid,status,pname,tname} = req.body;
+    const {time,uuid,puid,status,pname,tname,day} = req.body;
+
+    const checkslot =await ScheduleSchema.find({uid:uuid}).exec();
+
+    var rand= `${day}.time`;
+    var rand2 = `${day}.$.avail`;
+  
+
+    for (const key in checkslot[0]) {
+
+      if(key == day)
+      {
+        const timeslot = (checkslot[0][key])
+        for(var x =0;x< timeslot.length;x++)
+        {
+             if(timeslot[x].time == time.substring(0,5) && timeslot[x].avail == false)
+             {
+              res.status(400).send({ok:false});
+              return;
+             }
+             else if(timeslot[x].time == time.substring(0,5) && timeslot[x].avail == true){
+                 await ScheduleSchema.findOneAndUpdate({uid:uuid,[rand]:time.substring(0,5)},{$set:{[rand2]:false}}).exec();
+                
+             }
+        }
+      }
+    }
+ 
+
+   console.log("aaaaaaaaaaaaaaaaaaaaaaaa");
+
+
     const detail = new BookingSchedule({time,uuid,puid,status,pname,tname})
     try{
       detail.save();
@@ -267,36 +299,3 @@ export const appointmentchedulefortherapist = async(req,res) =>{
 }
 
 
-export const reportInsert = async(req,res) =>{
-
-  console.log(req.body);
-  
-  const {uuid,puid,report,reportname,tname,time} = req.body;
-  const detail = new Report({uuid,puid,report,reportname,tname,time})
-  try{
-    detail.save();
-    console.log("PDF Saved");
-    res.json({pdf : "Uploaded"});
-  }
-  catch(err)
-  {
-    console.log(err);
-    res.status(400).send({ok:false});
-  }
-}
-
-export const getReport = async(req,res) =>{
- 
-  const {uuid} = req.body;
-  console.log(uuid);
-  const detail = await Report.find({uuid}).exec();
-  try{
-    console.log(detail);
-    res.json(detail);
-  }
-  catch(err)
-  {
-    console.log(err);
-    res.status(400).send({ok:false});
-  }
-}

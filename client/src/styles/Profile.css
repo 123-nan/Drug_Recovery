@@ -1,0 +1,162 @@
+.rowa {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    width: auto;
+    justify-content: center;
+
+  }
+  
+  
+  video {
+    border: 2px solid black;
+  }
+  
+  
+  .row::after {
+    display: block;
+    clear: both;
+    content: "";
+  
+  }
+  
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .col-1a {
+    width: 8.33%
+  }
+  
+  
+  
+  .col-2a {
+    width: 16.66%;
+  }
+  
+  .col-3a {
+    width: 25%;
+  }
+  
+  .col-4a {
+    width: 33%;
+     background-color: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);;
+    border-right: 1px solid #dee2e6;
+    text-align: center;
+
+  }
+  
+  .col-5a {
+    width: 41.66%;
+  }
+  
+  .col-6a {
+    width: 50%;
+  }
+  
+  .col-7a {
+    width: 58.33%;
+  }
+  
+  .col-8a {
+    width: 66.66%;
+  
+  
+  }
+  
+  .col-9a {
+    width: 75%;
+  }
+  
+  .col-10a {
+    width: 83.33%;
+  }
+  
+  .col-11a {
+    width: 91.66%;
+  }
+  
+  .col-12a {
+    width: 100%;
+    text-align: left;
+   
+  }
+
+  .col-12a:hover{
+    background-color: #7F7FD5;
+    color: white;
+    border: none;
+  }
+  
+  .row-carda {
+    margin-top: 100px;
+  }
+
+  .profile-imagea{
+    width: 100px;
+    height: 100px;
+  }
+
+  div input {
+    display: block;
+height: 50px;
+width: 100%;
+background-color: rgba(255, 255, 255, 0.07);
+border-radius: 3px;
+padding: 0 10px;
+margin-top: 8px;
+font-size: 14px;
+font-weight: 300;
+  }
+
+  div input:hover{
+    border: none;
+    border-color: white;
+  }
+  input:focus{
+    border: none;
+  }
+  input::placeholder
+  {
+    border: none;
+  }
+
+  .right-col-12a{
+    box-shadow: 5px 10px;
+    border: solid;
+  }
+
+  
+  
+  
+  @media only screen and (max-width: 500px) {
+  
+    .col-5a {
+      width: 100%;
+    }
+  
+    .col-7a {
+      width: 100%;
+    }
+    .col-8a,.col-4a{
+      width: 100%;
+    }
+    .row-carda {
+      margin-top: 0px;
+    }
+  
+  }
+  
+  @media only screen and (max-width: 690px) {
+  
+  
+    .row-carda {
+      margin-top: 0px;
+    }
+  
+    .privacya{
+      text-align: center;
+    }
+  }
+  

@@ -1,5 +1,6 @@
 import express from 'express';
-import { register ,login, scheduleTherapist, editScheduleTherapist, therapistregister, therapistlogin,bookingschedule, appointmentcheduleforpatient, appointmentchedulefortherapist, reportInsert, getReport, insertscheduleTherapist, appointmentcancel} from '../controllers/auth';
+import { register ,login, scheduleTherapist, editScheduleTherapist, therapistregister, therapistlogin,bookingschedule, appointmentcheduleforpatient, appointmentchedulefortherapist, insertscheduleTherapist, appointmentcancel} from '../controllers/auth';
+import { reportInsert,getReport } from '../controllers/report';
 import { therapist } from '../controllers/auth';
 const router = express.Router();
 
@@ -15,6 +16,8 @@ router.post("/therapist-login",therapistlogin)
 router.get("/therapist",therapist)
 
 router.post("/schedule-therapist",scheduleTherapist)
+
+router.get("/schedule-therapist",scheduleTherapist)
 
 router.post("/addordelete-schedule-therapist",editScheduleTherapist)
 

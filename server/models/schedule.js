@@ -13,34 +13,46 @@ const scheduleSchema = new Schema({
         required:'Name is required'
     },
     monday:[{
-        type:String,
-        unique:true,
+        
+        time:String,
+        avail:Boolean,
+        
     }],
     tuesday:[{
-        type:String,
-        unique:true
+        
+        time:String,
+        avail:Boolean,
+        
     }],
     wednesday:[{
-        type:String,
-        unique:true,
+        
+        time:String,
+        avail:Boolean,
+        
     }],
     thrusday:[{
-        type:String,
-        unique:true,
+        
+        time:String,
+        avail:Boolean,
+        
     }],
     friday:[{
-        type:String,
-        unique:true,
-
+        
+        time:String,
+        avail:Boolean,
+        
     }], 
     saturday:[{
-        type:String,
-        unique:true,
-
+        
+        time:String,
+        avail:Boolean,
+        
     }],
     sunday:[{
-        type:String,
-        unique:true,
+        
+        time:String,
+        avail:Boolean,
+        
     }]
 },{timestamps:true})
 export default mongoose.model('ScheduleSchema',scheduleSchema); 

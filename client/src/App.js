@@ -21,15 +21,14 @@ import MedicalRecord from './user/report';
 import AppointmentP from './user/AppointmentP';
 import AppointmentT from './therapist/AppointmentT';
 import ChatRoom from './therapist/chatroom';
-
+import NewSchedule from './therapist/newSchedule';
 import Joinroom from './therapist/joinroom';
 import Testimonial from './components/Testimonial';
 import Contact from './routes/Contact';
 import PdfForm from './components/PdfForm';
-import Video from './videocall/video';
-import VideoRoom from './videocall/videoroom';
-import VideoChatRoom from './videocall/video-chat';
+import SocketConn from './videocall/socketconn';
 import EditSchedule from './therapist/EditSchedule';
+import Profile from './profile/profile';
 
 function App() {
   return (
@@ -39,6 +38,7 @@ function App() {
      <Switch>
       <Route exact path="/" component ={Home} />
       <PrivateRouteForAll exact path="/login" component ={Login} />
+      <PrivateRouteForAll exact path="/profile" component ={Profile} />
       <PrivateRouteForAll exact path="/register" component={Register} />
       <PrivateRouteForAll exact path="/therapist-login" component={TherapistLogin} />
       <PrivateRouteForNone exact path="/joinroom/:id" component ={Joinroom} />
@@ -55,10 +55,8 @@ function App() {
       <Route exact path="/testimonial" component={Testimonial} />
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/pdf-form" component={PdfForm} />
-      <Route exact path="/video-room/:id" component={VideoRoom} />
-      <Route exact path="/video-chat/" component={VideoChatRoom} />
-      
-      <Route exact path="/video-call/:id" component={Video} />
+      <Route exact path="/socket-connection" component = {SocketConn} />
+      <Route exact path="/demo-insert" component={NewSchedule} />
       <PrivateRouteForTherapist exact path="/edit-schedule/:id" component={EditSchedule} /> 
       <PrivateRouteForTherapist exact path="/pdf-form/:id" component={PdfGenerator} />
     </Switch>

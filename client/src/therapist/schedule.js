@@ -52,8 +52,8 @@ const Schedule = () => {
        }
 
 
-       if(customList!=null)
-       customList.map((list) => console.log(list.day,list.date));
+    //    if(customList!=null)
+    //    customList.map((list) => console.log(list.day,list.date));
 
     return (
         <>

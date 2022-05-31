@@ -23,21 +23,6 @@ const EditScheduleCard =({day,list,uuid,tname,customList}) =>{
     const handleClick = async (e)=>{
 
 
-         var val = e.target.value;
-
-        val = e.target.innerText.substring(0,5);
-        const monday="monday";
-
-        await axios.post('http://localhost:8003/api/addordelete-schedule-therapist', {
-           uid:puid,day,val
-          })
-          .then(function (response) {
-            toast.success("Deleted");
-          })
-          .catch(function (error) {
-            toast.dark(error);
-          });
-    
     
     }
 
@@ -51,7 +36,7 @@ const EditScheduleCard =({day,list,uuid,tname,customList}) =>{
 
   <ul className="list-group list-group-flush">
 
-    {list!=null &&  list.map((list) =><li className="list-group-item list-delete cursor"  onClick={handleClick}>{(list[0] >= '1' && list[1] >= '2')||(list[0]>=2)?list+" PM":list+" AM"}</li>)}
+  {list != null && list.map((list) => list.avail ? <li className="list-group-item cursor" onClick={handleClick}>{(list.time[0] >= '1' && list.time[1] >= '2') || (list.time[0] >= 2) ? list.time + " PM" : list.time + " AM"}</li> : <li className = "list-group-item bg-danger cursor"  > {(list.time[0] >= '1' && list.time[1] >= '2') || (list.time[0] >= 2) ? list.time + " PM" : list.time + " AM"}</li>)}
 
   </ul>
   </div>

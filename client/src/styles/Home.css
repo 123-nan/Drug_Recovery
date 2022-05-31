@@ -101,44 +101,10 @@ video {
     margin-top: 0px;
   }
 
-}
-
-.privacy {
-  text-align: center;
-}
-
-
-.video-large-div {
-  display: flex;
-  justify-content: center;
-}
-
-.video-div {
-  height: 300px;
-  width: 398px;
-  margin: 10px;
-}
-
-.input-video {
-  display: block;
-
-
-  background-color: rgba(255, 255, 255, 0.07);
-
-  padding: 0 10px;
-  margin-top: 8px;
-  font-size: 14px;
-  font-weight: 300
-}
-
-.input-button{
-  margin: 10px;
-  border-radius: 20px;
-  border: 2px solid rgb(0, 0, 0);
-}
   .privacy{
     text-align: center;
   }
+}
 
   .homeback{
     background-image: url("../components/images/blueback.jpg");
@@ -186,10 +152,4 @@ video {
 
   .cure{
     background-color: #ffffff;
-<<<<<<< HEAD
   }
-=======
-  }
-
-  
->>>>>>> 4bc85a6bf18fb099d85e3238a2c051e19cf130d7
