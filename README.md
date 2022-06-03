@@ -17,9 +17,12 @@ faster recovery.
 ## Installation
 
 1. Clone this repo
-2. npm i in client folder
-3. npm start in client folder to start frontend
-4. npm start in server folder to start Backend
+2. Run following command in client folder
+                 `npm install`
+                 `npm start`
+
+5. Run following command in server folder to start Backend
+                  `npm start`
 
 ## Features
 ### 1. Patient Can Login and Register and Book slot to get appointment from Doctors
