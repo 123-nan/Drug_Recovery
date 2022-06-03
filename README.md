@@ -26,7 +26,7 @@ faster recovery.
                   
  ## Tech Stack Used
  
- ### HTML, CSS, JS, REACT, MONGODB, FIREBASE
+ ### HTML, CSS, JS, REACT, NODE, EXPRESS, MONGODB, FIREBASE
 
 ## Features
 ### 1. Patient Can Login and Register and Book slot to get appointment from Doctors
