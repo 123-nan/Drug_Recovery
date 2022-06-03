@@ -23,6 +23,10 @@ faster recovery.
 
 5. Run following command in server folder to start Backend
                   `npm start`
+                  
+ ## Tech Stack Used
+ 
+ ### HTML, CSS, JS, REACT, MONGODB, FIREBASE
 
 ## Features
 ### 1. Patient Can Login and Register and Book slot to get appointment from Doctors
