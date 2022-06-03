@@ -44,3 +44,7 @@ faster recovery.
 
 
 ![alt text](https://firebasestorage.googleapis.com/v0/b/drug-recovery-5c4fe.appspot.com/o/Screenshot%20from%202022-05-27%2015-35-27.png?alt=media&token=a5f96be9-35c5-4db1-a99c-2e7ec433db07)
+
+### 4. User can cancel the Slot according to need
+
+![alt text](https://firebasestorage.googleapis.com/v0/b/drug-recovery-5c4fe.appspot.com/o/Screenshot%20from%202022-06-03%2016-08-58.png?alt=media&token=25463687-e201-47a0-b9a4-592656f4d2b0)
