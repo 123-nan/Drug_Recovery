@@ -3,7 +3,7 @@
 # Cure Street
 # Helping Others To Recover From Drugs  
 
-## Project Description
+## Idea Behind The Project
 
 To control drug addiction we can develop recovery
 site for drug addiction. We can plan to execute this project
@@ -13,6 +13,13 @@ cravings and interact with other people facing similar issues.
 Daily interactions in the recovery community can provide life-
 saving support and even increase motivation, resulting in a
 faster recovery.
+
+## Installation
+
+1. Clone this repo
+2. npm i in client folder
+3. npm start in client folder to start frontend
+4. npm start in server folder to start Backend
 
 ## Features
 ### 1. Patient Can Login and Register and Book slot to get appointment from Doctors
